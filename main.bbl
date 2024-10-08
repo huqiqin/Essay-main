@@ -219,9 +219,59 @@ Christopher Jekeli.
 \newblock {\em Inertial navigation systems with geodetic applications}.
 \newblock Walter de Gruyter GmbH \& Co KG, 2023.
 
+\bibitem{harlan1968eotvos}
+Raymond~B Harlan.
+\newblock Eotvos corrections for airborne gravimetry.
+\newblock {\em Journal of Geophysical Research}, 73(14):4675--4679, 1968.
+
 \bibitem{hao2024methods}
 Shiwen Hao, Zhili Zhang, Zhaofa Zhou, Zhenjun Chang, Zhihao Xu, Hui Duan, and Ziqi Li.
 \newblock Methods for gravity anomaly and dov determination based on mpgac for land vehicles.
 \newblock {\em IEEE Transactions on Instrumentation and Measurement}, 2024.
+
+\bibitem{gao2021real}
+Duanyang Gao, Baiqing Hu, Fangjun Qin, Lubin Chang, and Xu~Lyu.
+\newblock A real-time gravity compensation method for ins based on bpnn.
+\newblock {\em IEEE Sensors Journal}, 21(12):13584--13593, 2021.
+
+\bibitem{savage1978strapdown}
+Paul~G Savage.
+\newblock Strapdown sensors.
+\newblock {\em AGARD Lecture series}, 95, 1978.
+
+\bibitem{li1995chaotic}
+Zuofa Li and Klaus-Peter Schwarz.
+\newblock Chaotic behaviour in geodetic sensors and fractal characteristics of sensor noise.
+\newblock In {\em Geodetic Theory Today: Third Hotine-Marussi Symposium on Mathematical Geodesy L’Aquila, Italy, May 30--June 3, 1994}, pages 246--258. Springer, 1995.
+
+\bibitem{1020386196.nh}
+Jing ZHU.
+\newblock {\em Study on Gravity aided Technologies inShipborne Attitude Measurement with Ring Laser Gyro}.
+\newblock PhD thesis, National University of Defense Technology, 2018.
+
+\bibitem{zhang2023gravity}
+Panpan Zhang, Lin Wu, Lifeng Bao, Bo~Wang, Hui Liu, Qianqian Li, and Yong Wang.
+\newblock Gravity disturbance compensation for dual-axis rotary modulation inertial navigation system.
+\newblock {\em Frontiers in Marine Science}, 10:1086225, 2023.
+
+\bibitem{lerch1972gravitational}
+FJ~Lerch, CA~Wagner, DE~Smith, ML~Andson, JE~Brownd, and JA~Richardson.
+\newblock Gravitational field models for the earth (gem 1 and 2).
+\newblock Technical report, 1972.
+
+\bibitem{tapley1997teg}
+BD~Tapley, CK~Shum, JC~Ries, SR~Poole, PAM Abusali, SV~Bettadpur, RJ~Eanes, MC~Kim, HJ~Rim, and BE~Schutz.
+\newblock The teg-3 geopotential model.
+\newblock In {\em Gravity, Geoid and Marine Geodesy: International Symposium No. 117 Tokyo, Japan, September 30--October 5, 1996}, pages 453--460. Springer, 1997.
+
+\bibitem{pavlis2012development}
+Nikolaos~K Pavlis, Simon~A Holmes, Steve~C Kenyon, and John~K Factor.
+\newblock The development and evaluation of the earth gravitational model 2008 (egm2008).
+\newblock {\em Journal of geophysical research: solid earth}, 117(B4), 2012.
+
+\bibitem{flechtner2021satellite}
+Frank Flechtner, Christoph Reigber, Reiner Rummel, and Georges Balmino.
+\newblock Satellite gravimetry: a review of its realization.
+\newblock {\em Surveys in Geophysics}, 42(5):1029--1074, 2021.
 
 \end{thebibliography}

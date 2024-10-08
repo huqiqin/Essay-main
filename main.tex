@@ -190,11 +190,11 @@
       \left\{ \begin{aligned}
       & \delta {{g}_{N}}={{{\dot{v}}}_{N}}-{{f}_{N}}+(2{{w}_{ie}}\sin L+\frac{{{v}_{E}}\tan L}{{{R}_{N}}+h}){{v}_{E}}-\frac{{{v}_{N}}{{v}_{D}}}{{{R}_{M}}+h} \\ 
       & \delta {{g}_{E}}={{{\dot{v}}}_{E}}-{{f}_{E}}-(\frac{{{v}_{E}}}{{{R}_{N}}+h}+2{{w}_{ie}}\cos L)({{v}_{D}}+{{v}_{N}}\tan L) \\ 
-      & \delta {{g}_{D}}={{{\dot{v}}}_{D}}-{{f}_{D}}+(2{{w}_{ie}}\cos L+\frac{{{v}_{E}}}{{{R}_{N}}+h}){{v}_{E}}+\frac{v_{N}^{2}}{{{R}_{M}}+h}-\gamma  \\ 
+      & \delta {{g}_{D}}={{{\dot{v}}}_{D}}-{{f}_{D}}+\left[(2{{w}_{ie}}\cos L+\frac{{{v}_{E}}}{{{R}_{N}}+h}){{v}_{E}} \right]+\frac{v_{N}^{2}}{{{R}_{M}}+h}-\gamma  \\ 
 \end{aligned} \right.
 \label{equ_delta_g_more}
 \end{equation}
-其中，$R_N$和$R_M$分别表示卯酉圈半径和子午圈半径，$L$代表纬度，$w_{ie}$表示地球自转角速度。
+其中，$R_N$和$R_M$分别表示卯酉圈半径和子午圈半径，$L$代表纬度，$w_{ie}$表示地球自转角速度，等式$\delta g_D$右边的$\left[ \cdot  \right]$为厄特弗斯效应\upcite{harlan1968eotvos}。
 
 于是，由式\ref{equ_delta_g}可以进一步得到重力扰动的误差模型，
 \begin{equation}
@@ -205,7 +205,7 @@
       \end{aligned}
       \label{equ_diff_disturb}
 \end{equation}
-其中，$\text{d}\bm{\delta g}^n$代表重力扰动的误差，$\bm{[\phi^n \times]}$是姿态误差$\bm{\phi^n}$的反对称矩阵，$\bm{\delta \gamma}^n$代表正常重力的模型误差。
+其中，$\text{d}\bm{\delta g}^n$代表重力扰动的误差，$\bm{[\phi^n \times]}$是姿态误差$\bm{\phi^n}$的反对称矩阵，$\bm{\delta \gamma}^n$代表正常重力的模型误差
 
 进一步的，当考虑惯性导航系统和卫星导航系统存在同步时间差$\text{d}T$时\upcite{schwarz1995some}，式\ref{equ_diff_disturb}可以重新写作
 \begin{equation}
@@ -219,19 +219,30 @@
 
 随着实时运动学差分GNSS技术的不断改进，采用实时运动学差分GNSS技术的定位精度和速度精度分别小于0.01m和0.03m/s。根据前面的分析，在式\ref{equ_diff_disturb}中由差分GNSS引起的最后三项误差均低于1mGal;当时间同步误差限制在50$\mu s$时，由同步时间差引起的$\ddot{\bm{v}}^n\text{d}T$误差项可维持在1mGal以内\upcite{hao2024methods}。因此，捷联式重力扰动的误差主要由动态加速度误差$\bm{\delta} \dot{\bm{v}}^n$、姿态误差$\bm{[\phi^n\times]}\bm{C}^n_b \bm{f}^b$和比力误差$\bm{C}^n_b \bm{\delta f}^b$引起的。
 
+\subsection{对速度的影响}
+由式\ref{equ_diff_disturb_more}可知，重力扰动最直接影响的是加速度计对于速度的测量，在经过积分计算后，最终对载体位置的解算产生影响。文献\cite{gao2021real}通过设定不同大小重力扰动的仿真试验，发现当重力扰动大于100mGal时，纯惯性导航在一天内计算的最大位置误差将超过4海里。
+
 \subsection{对姿态的影响}
+惯导的姿态误差可以通过式 来表示，
+\begin{equation}
+      \bm{\phi}^n = \bm{\phi}^n_0 + \int_{t_0}^{t}{\bm{C}^n_b \,\text{d}w^b_{ib} \,\text{d}t}
+\end{equation}
+其中第一项$\bm{\phi}^n_0$代表初始对准误差，包括重力异常误差；第二项主要是陀螺自身引起的器件误差，包括陀螺轴非正交误差，比例因子误差，线性和非线性漂移，随机游走，量化噪声和分形噪声等\upcite{savage1978strapdown,li1995chaotic}。
 
 
-\subsection{对比力测量的影响}
-
+此外，相关研究表明，当载体速度较大时，姿态误差主要由水平重力扰动的中低频分量($\lambda_0>30$km)引起；随着载体速度减小，高频分量则占主导地位，换句话说，低速运动的载体所经历的重力场细节特征作用更加明显，对姿态误差影响更大，因此确定水平重力扰动的高频信号是进一步提高重力补偿精度的关键\upcite{jekeli1994airborne,1020386196.nh}。
 
 \subsection{对初始对准的影响}
-
+朱婧提出了一种海洋重力场信息与激光陀螺姿态测量系统(Attitude $\And$ Heading Measurement System, AHMS)\upcite{1020386196.nh}，并对于在不同工作模式下DOV对初始对准精度的影响进行了分析和仿真验证，结果表明，单轴旋转系统的对准精度随DOV增大而降低，随着对准时间的增加，引起的姿态误差趋于计算的理论值。在此基础之上，张盼盼进一步地借助双轴旋转惯导的优势\upcite{zhang2023gravity}，将加速度计的漂移进行准确的估计后，通过静态仿真实验验证了重力扰动对北向和东向姿态误差的影响，并通过补偿重力扰动，成功减小了姿态误差。
 
 \subsection{对载体运动的影响}
 
 \section{现有的补偿方法及策略}
+上个世纪70年代起，越来越多的卫星用于重力场的重建，其中GEM(Goddard Earth Model)和TEG(Texas Earth Gravity models)模型开发团队在联合重力建模工作上取得了重大进展\upcite{lerch1972gravitational,tapley1997teg}，但是其分辨率精度并不能满足实际需求。之后相继出现了EGM96,EGM2008和EIGEN-6C使得全球重力场模型的实际应用成为可能。大约自1991年以来，雷达测高已用于以厘米精度扫描海洋表面，有的工作在具有非常高空间分辨率但重复率相当适中的大地测量模式下，有的则是在具有高时间重复率但相对粗糙的地面轨迹网格的海洋学模式下。
+但是构建海洋重力场模型的不确定因素在于目前对海洋地形的模拟不足，即海面与大地水准面之间的高度差，而基于测高的海洋大地水准面和重力场模型是计算组合重力场模型的重要数据源\upcite{pavlis2012development,flechtner2021satellite}。
 
+
+为了进一步提高重力补偿的实时性，文献\cite{gao2021real}提出了一种基于反向传播神经网络(back-propagation neural network (BPNN))的重力预测模型，通过将规划航区内重力扰动信息作为数据集进行训练，用于纯惯导解算的实时补偿，其效果与用球谐模型补偿想同。缺点是因为其只关注于实时地去获取补偿数值，而忽略了其补偿的具体方案，并且只适用于预先规划的区域。
 \section{总结与展望}
 
 
