@@ -234,25 +234,40 @@ Duanyang Gao, Baiqing Hu, Fangjun Qin, Lubin Chang, and Xu~Lyu.
 \newblock A real-time gravity compensation method for ins based on bpnn.
 \newblock {\em IEEE Sensors Journal}, 21(12):13584--13593, 2021.
 
-\bibitem{savage1978strapdown}
-Paul~G Savage.
-\newblock Strapdown sensors.
-\newblock {\em AGARD Lecture series}, 95, 1978.
+\bibitem{WANGJING2016}
+Jing WANG, Gongliu YANG, Xiangyun LI, and Xiao ZHOU.
+\newblock Error indicator analysis for gravity disturbing vector's influence on inertial navigation system.
+\newblock {\em Journal of Chinese Inertial Technology}, pages 285--290, 2016.
 
-\bibitem{li1995chaotic}
-Zuofa Li and Klaus-Peter Schwarz.
-\newblock Chaotic behaviour in geodetic sensors and fractal characteristics of sensor noise.
-\newblock In {\em Geodetic Theory Today: Third Hotine-Marussi Symposium on Mathematical Geodesy L’Aquila, Italy, May 30--June 3, 1994}, pages 246--258. Springer, 1995.
+\bibitem{chang2018gravity}
+Lubin CHANG, Fangjun QIN, and Meiping WU.
+\newblock Gravity disturbance compensation for inertial navigation system.
+\newblock {\em IEEE Transactions on Instrumentation and Measurement}, 68(10):3751--3765, 2018.
 
 \bibitem{1020386196.nh}
 Jing ZHU.
 \newblock {\em Study on Gravity aided Technologies inShipborne Attitude Measurement with Ring Laser Gyro}.
 \newblock PhD thesis, National University of Defense Technology, 2018.
 
+\bibitem{LUOKAIXIN2023}
+Kaixin LUO.
+\newblock {\em {Research on Key Technologies of Ocean Gravity-Aided Inertial Navigation}}.
+\newblock PhD thesis, {National University of Defense Technology}, 2023.
+
+\bibitem{soler2014deflection}
+Tom{\'a}s Soler, Jen-Yu Han, and Neil~D Weston.
+\newblock On deflection of the vertical components and their transformations.
+\newblock {\em Journal of surveying engineering}, 140(2):04014005, 2014.
+
 \bibitem{zhang2023gravity}
 Panpan Zhang, Lin Wu, Lifeng Bao, Bo~Wang, Hui Liu, Qianqian Li, and Yong Wang.
 \newblock Gravity disturbance compensation for dual-axis rotary modulation inertial navigation system.
 \newblock {\em Frontiers in Marine Science}, 10:1086225, 2023.
+
+\bibitem{TIE2017impact}
+Junbo Tie, Meiping Wu, Juliang Cao, Junxiang Lian, and Shaokun Cai.
+\newblock The impact of initial alignment on compensation for deflection of vertical in inertial navigation.
+\newblock In {\em 2017 IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM)}, pages 381--386. IEEE, 2017.
 
 \bibitem{lerch1972gravitational}
 FJ~Lerch, CA~Wagner, DE~Smith, ML~Andson, JE~Brownd, and JA~Richardson.
@@ -273,5 +288,15 @@ Nikolaos~K Pavlis, Simon~A Holmes, Steve~C Kenyon, and John~K Factor.
 Frank Flechtner, Christoph Reigber, Reiner Rummel, and Georges Balmino.
 \newblock Satellite gravimetry: a review of its realization.
 \newblock {\em Surveys in Geophysics}, 42(5):1029--1074, 2021.
+
+\bibitem{ZHOUXIAO2016}
+Xiao ZHOU, Gongliu YANG, and Qingzhong CAI.
+\newblock Compensation on gravity disturbance for high-precision ins based on wavelet neural network.
+\newblock {\em Journal of Chinese Inertial Technology}, pages 571--576, 2016.
+
+\bibitem{LIQIAN2022}
+Qian LI, Dezhao WANG, Yuren JI, et~al.
+\newblock Gravity disturbance influence analysis and compensation on high-precision ins in polar region.
+\newblock {\em Journal of Chinese Inertial Technology}, pages 429--436，444, 2022.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2024)
+This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
@@ -7,45 +7,45 @@ Warning--there's a number but no series in becker2016advanced
 Warning--there's a number but no volume in johann2019direct
 Warning--empty booktitle in berzhitskii2010airborne
 Warning--empty institution in lerch1972gravitational
-You've used 55 entries,
+You've used 60 entries,
             1791 wiz_defined-function locations,
-            776 strings with 13672 characters,
-and the built_in function-call counts, 13666 in all, are:
-= -- 1261
-> -- 600
-< -- 15
-+ -- 225
-- -- 170
-* -- 924
-:= -- 2140
-add.period$ -- 171
-call.type$ -- 55
-change.case$ -- 49
+            805 strings with 14764 characters,
+and the built_in function-call counts, 15295 in all, are:
+= -- 1413
+> -- 670
+< -- 18
++ -- 250
+- -- 190
+* -- 1040
+:= -- 2378
+add.period$ -- 186
+call.type$ -- 60
+change.case$ -- 53
 chr.to.int$ -- 0
-cite$ -- 59
-duplicate$ -- 607
-empty$ -- 1285
-format.name$ -- 170
-if$ -- 3064
+cite$ -- 64
+duplicate$ -- 678
+empty$ -- 1426
+format.name$ -- 190
+if$ -- 3443
 int.to.chr$ -- 0
-int.to.str$ -- 55
-missing$ -- 54
-newline$ -- 277
-num.names$ -- 55
-pop$ -- 144
+int.to.str$ -- 60
+missing$ -- 58
+newline$ -- 302
+num.names$ -- 60
+pop$ -- 156
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 299
+skip$ -- 347
 stack$ -- 0
-substring$ -- 998
-swap$ -- 168
-text.length$ -- 15
+substring$ -- 1155
+swap$ -- 200
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 140
-width$ -- 57
-write$ -- 604
+while$ -- 154
+width$ -- 62
+write$ -- 659
 (There were 4 warnings)
