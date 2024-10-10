@@ -1,5 +1,15 @@
 \begin{thebibliography}{10}
 
+\bibitem{gelb1968geodetic}
+A~Gelb.
+\newblock Geodetic and geophysical uncertainties-fundamental limitations on terrestrial inertial navigation.
+\newblock In {\em Control and Flight Dynamics Conference}, page 847, 1968.
+
+\bibitem{peshekhonov2020problem}
+VG~Peshekhonov.
+\newblock Problem of the vertical deflection in high-precision inertial navigation.
+\newblock {\em Gyroscopy and Navigation}, 11:255--262, 2020.
+
 \bibitem{article}
 Yan Qu.
 \newblock {Current Status and Development Trend of Gyroscopes in Inertial Navigation in China}.
@@ -259,6 +269,11 @@ Tom{\'a}s Soler, Jen-Yu Han, and Neil~D Weston.
 \newblock On deflection of the vertical components and their transformations.
 \newblock {\em Journal of surveying engineering}, 140(2):04014005, 2014.
 
+\bibitem{hao2022analysis}
+Shiwen Hao, Zhili Zhang, Zhaofa Zhou, Zhenjun Chang, Zhihao Xu, and Xinyu Li.
+\newblock Analysis of dov estimation in initial alignment based on single-axis rotating sins.
+\newblock {\em Measurement}, 204:112047, 2022.
+
 \bibitem{zhang2023gravity}
 Panpan Zhang, Lin Wu, Lifeng Bao, Bo~Wang, Hui Liu, Qianqian Li, and Yong Wang.
 \newblock Gravity disturbance compensation for dual-axis rotary modulation inertial navigation system.
@@ -289,10 +304,90 @@ Frank Flechtner, Christoph Reigber, Reiner Rummel, and Georges Balmino.
 \newblock Satellite gravimetry: a review of its realization.
 \newblock {\em Surveys in Geophysics}, 42(5):1029--1074, 2021.
 
+\bibitem{jiang2019measurement}
+Xingwei Jiang, Yongjun Jia, and Youguang Zhang.
+\newblock Measurement analyses and evaluations of sea-level heights using the hy-2a satellite’s radar altimeter.
+\newblock {\em Acta Oceanologica Sinica}, 38(11):134--139, 2019.
+
+\bibitem{liu2020preliminary}
+Qiankun Liu, Ke~Xu, Maofei Jiang, and Jiaming Wang.
+\newblock Preliminary marine gravity field from hy-2a/gm altimeter data.
+\newblock {\em Acta Oceanologica Sinica}, 39:127--134, 2020.
+
+\bibitem{wan2020vertical}
+Xiaoyun Wan, Richard~Fiifi Annan, Shuanggen Jin, and Xiaoqi Gong.
+\newblock Vertical deflections and gravity disturbances derived from hy-2a data.
+\newblock {\em Remote Sensing}, 12(14):2287, 2020.
+
+\bibitem{zhang2020inversion}
+Shengjun Zhang, Ole~Baltazar Andersen, Xiangxue Kong, and Hang Li.
+\newblock Inversion and validation of improved marine gravity field recovery in south china sea by incorporating hy-2a altimeter waveform data.
+\newblock {\em Remote Sensing}, 12(5):802, 2020.
+
+\bibitem{zhu2019hy}
+Chengcheng Zhu, Jinyun Guo, Cheinway Hwang, Jinyao Gao, Jiajia Yuan, and Xin Liu.
+\newblock How hy-2a/gm altimeter performs in marine gravity derivation: assessment in the south china sea.
+\newblock {\em Geophysical Journal International}, 219(2):1056--1064, 2019.
+
+\bibitem{ji2021deflections}
+Hui Ji, Jinyun Guo, Chengcheng Zhu, Jiajia Yuan, Xin Liu, and Guowei Li.
+\newblock On deflections of vertical determined from hy-2a/gm altimetry data in the bay of bengal.
+\newblock {\em IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 14:12048--12060, 2021.
+
+\bibitem{guo2022accuracy}
+Jinyun Guo, Hongxin Luo, Chengcheng Zhu, Hui Ji, Guowei Li, and Xin Liu.
+\newblock Accuracy comparison of marine gravity derived from hy-2a/gm and cryosat-2 altimetry data: a case study in the gulf of mexico.
+\newblock {\em Geophysical Journal International}, 230(2):1267--1279, 2022.
+
+\bibitem{ning1994spherical}
+JS~Ning, DB~Chao, and JC~Li.
+\newblock The spherical convolution form of vening-meinesz formula.
+\newblock {\em Acta Geodaetica et Cartographica Sinica}, 23(3):161--166, 1994.
+
+\bibitem{chen1982methods}
+JY~Chen.
+\newblock Methods for computing deflections of the vertical by modifying vening-meinesz'function.
+\newblock {\em Bulletin g{\'e}od{\'e}sique}, 56:9--26, 1982.
+
+\bibitem{ning2006refined}
+Jinsheng NING, Chunxi GUO, Bin WANG, and Huimin WANG.
+\newblock Refined determination of vertical deflection in china mainland area.
+\newblock {\em Geomatics and Information Science of Wuhan University}, 31(12):1035--1038, 2006.
+
+\bibitem{wang2016application}
+Jing Wang, Gongliu Yang, Xiangyun Li, and Xiao Zhou.
+\newblock Application of the spherical harmonic gravity model in high precision inertial navigation systems.
+\newblock {\em Measurement Science and Technology}, 27(9):095103, 2016.
+
+\bibitem{wu2016gravity}
+Ruonan WU, Qiuping WU, Fengtian HAN, Tianyi LIU, Peida HU, and Haixia LI.
+\newblock {Gravity compensation using EGM2008 for high-precision long-term inertial navigation systems}.
+\newblock {\em Sensors}, 16(12):2177, 2016.
+
+\bibitem{zhu2019research}
+Zhuangsheng Zhu, Bo~Zhao, Yiyang Guo, and Xiangyang Zhou.
+\newblock Research on gravity vertical deflection on attitude of position and orientation system and compensation method.
+\newblock {\em Aerospace science and technology}, 85:495--504, 2019.
+
+\bibitem{weng2020analysis}
+Jun Weng, Jianning Liu, Mingxing Jiao, and Ke~Kou.
+\newblock Analysis and on-line compensation of gravity disturbance in a high-precision inertial navigation system.
+\newblock {\em GPS Solutions}, 24:1--8, 2020.
+
 \bibitem{ZHOUXIAO2016}
 Xiao ZHOU, Gongliu YANG, and Qingzhong CAI.
 \newblock Compensation on gravity disturbance for high-precision ins based on wavelet neural network.
 \newblock {\em Journal of Chinese Inertial Technology}, pages 571--576, 2016.
+
+\bibitem{yang2024autonomous}
+Jie Yang, Xinlong Wang, Bin Wang, and Xiaodong Hu.
+\newblock An autonomous and high-accuracy gravity disturbance compensation scheme for rotary inertial navigation system.
+\newblock {\em Measurement Science and Technology}, 35(8):086302, 2024.
+
+\bibitem{an2021method}
+Wen An, Jiangning Xu, Hongyang He, and Pengfei Jiang.
+\newblock A method of deflection of the vertical measurement based on attitude difference compensation.
+\newblock {\em IEEE Sensors Journal}, 21(12):13125--13136, 2021.
 
 \bibitem{LIQIAN2022}
 Qian LI, Dezhao WANG, Yuren JI, et~al.

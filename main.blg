@@ -7,45 +7,45 @@ Warning--there's a number but no series in becker2016advanced
 Warning--there's a number but no volume in johann2019direct
 Warning--empty booktitle in berzhitskii2010airborne
 Warning--empty institution in lerch1972gravitational
-You've used 60 entries,
+You've used 79 entries,
             1791 wiz_defined-function locations,
-            805 strings with 14764 characters,
-and the built_in function-call counts, 15295 in all, are:
-= -- 1413
-> -- 670
-< -- 18
-+ -- 250
-- -- 190
-* -- 1040
-:= -- 2378
-add.period$ -- 186
-call.type$ -- 60
-change.case$ -- 53
+            908 strings with 18423 characters,
+and the built_in function-call counts, 20173 in all, are:
+= -- 1834
+> -- 930
+< -- 19
++ -- 344
+- -- 265
+* -- 1448
+:= -- 3176
+add.period$ -- 243
+call.type$ -- 79
+change.case$ -- 72
 chr.to.int$ -- 0
-cite$ -- 64
-duplicate$ -- 678
-empty$ -- 1426
-format.name$ -- 190
-if$ -- 3443
+cite$ -- 83
+duplicate$ -- 859
+empty$ -- 1874
+format.name$ -- 265
+if$ -- 4483
 int.to.chr$ -- 0
-int.to.str$ -- 60
-missing$ -- 58
-newline$ -- 302
-num.names$ -- 60
-pop$ -- 156
+int.to.str$ -- 79
+missing$ -- 77
+newline$ -- 397
+num.names$ -- 79
+pop$ -- 181
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 347
+skip$ -- 413
 stack$ -- 0
-substring$ -- 1155
-swap$ -- 200
-text.length$ -- 18
+substring$ -- 1569
+swap$ -- 227
+text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 154
-width$ -- 62
-write$ -- 659
+while$ -- 204
+width$ -- 81
+write$ -- 868
 (There were 4 warnings)
