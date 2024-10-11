@@ -389,6 +389,11 @@ Wen An, Jiangning Xu, Hongyang He, and Pengfei Jiang.
 \newblock A method of deflection of the vertical measurement based on attitude difference compensation.
 \newblock {\em IEEE Sensors Journal}, 21(12):13125--13136, 2021.
 
+\bibitem{stepanov2020algorithms}
+Oleg~A Stepanov, Dmitry~A Koshaev, Andrei~V Motorin, Anton~A Krasnov, and Alexander~V Sokolov.
+\newblock Algorithms for integrated processing of marine gravimeter data and gnss measurements.
+\newblock {\em IFAC-PapersOnLine}, 53(2):500--505, 2020.
+
 \bibitem{LIQIAN2022}
 Qian LI, Dezhao WANG, Yuren JI, et~al.
 \newblock Gravity disturbance influence analysis and compensation on high-precision ins in polar region.

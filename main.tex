@@ -304,7 +304,7 @@
 
 \section{现有的补偿方法及策略}
 \subsection{球谐模型补偿}
-上个世纪70年代起，越来越多的卫星用于重力场的重建，其中GEM(Goddard Earth Model)和TEG(Texas Earth Gravity models)模型开发团队在联合重力建模工作上取得了重大进展\upcite{lerch1972gravitational,tapley1997teg}，但是其分辨率精度并不能满足实际需求。之后相继出现了EGM96,EGM2008和EIGEN-6C使得全球重力场模型的实际应用成为可能。大约自1991年以来，雷达测高已用于以厘米精度扫描海洋表面，有的工作在具有非常高空间分辨率但重复率相当适中的大地测量模式下，有的则是在具有高时间重复率但相对粗糙的地面轨迹网格的海洋学模式下。但是构建海洋重力场模型的不确定因素在于目前对海洋地形的模拟不足，即海面与大地水准面之间的高度差，而基于测高的海洋大地水准面和重力场模型是计算组合重力场模型的重要数据源\upcite{pavlis2012development,flechtner2021satellite}。中国于2011年发射了海洋-2A(Haiyang-2A,HY-2A)卫星，并于2016年改变轨道执行探测海洋重力异常的大地测量任务。几项调查证明\upcite{jiang2019measurement,liu2020preliminary,wan2020vertical,zhang2020inversion,zhu2019hy,ji2021deflections,guo2022accuracy,guo2022accuracy}，HY-2A具有接近其他测高卫星的精度。目前国际上可以准确估计重力场信息的公开球谐函数模型有美国国家地理空间情报局(National Geospatial-Intelligence Agency, NGA)发布的EGM2008和由德国Geo Forschungs Zentrum(GFZ)发布的EIGEN-6C4。
+上个世纪70年代起，越来越多的卫星用于重力场的重建，其中GEM(Goddard Earth Model)和TEG(Texas Earth Gravity models)模型开发团队在联合重力建模工作上取得了重大进展\upcite{lerch1972gravitational,tapley1997teg}，但是其分辨率精度并不能满足实际需求。之后相继出现了EGM96,EGM2008和EIGEN-6C使得全球重力场模型的实际应用成为可能。大约自1991年以来，雷达测高已用于以厘米精度扫描海洋表面，有的工作在具有非常高空间分辨率但重复率相当适中的大地测量模式下，有的则是在具有高时间重复率但相对粗糙的地面轨迹网格的海洋学模式下。但是构建海洋重力场模型的不确定因素在于目前对海洋地形的模拟不足，即海面与大地水准面之间的高度差，而基于测高的海洋大地水准面和重力场模型是计算组合重力场模型的重要数据源\upcite{pavlis2012development,flechtner2021satellite}。中国于2011年发射了海洋-2A(Haiyang-2A,HY-2A)卫星，并于2016年改变轨道执行探测海洋重力异常的大地测量任务。几项调查证明\upcite{jiang2019measurement,liu2020preliminary,wan2020vertical,zhang2020inversion,zhu2019hy,ji2021deflections,guo2022accuracy,guo2022accuracy}，HY-2A具有接近其他测高卫星的精度。目前国际上可以准确估计重力场信息的公开球谐函数模型有美国国家地理空间情报局(National Geospatial-Intelligence Agency, NGA)发布的EGM2008和由德国波茨坦地球科学研究中心German Research Centre for Geosciences(GFZ Potsdam)发布的EIGEN-6C4。
 在球坐标系下，重力扰动势可以表示为：
 \begin{equation}
       T = \frac{GM}{r}\sum_{n=2}^{N}{\left( \frac{R_e}{r}\right)^n\sum_{m=0}^{n}(\bar{C}_{nm}^{\ast}\cos{m\lambda} + \bar{S}_{nm}^{\ast}\sin{m\lambda})\bar{P}_{nm}(\cos \theta)} 
@@ -317,17 +317,17 @@
 相较于使用全球模型，相关人员结合实测数据，精细化了地方区域的球谐函数模型\upcite{zhu2019research,weng2020analysis}，极大的提升了模型的精度，但是显而易见的是，该方法仅限于特定的区域。
 为了进一步提高重力补偿的实时性，文献\cite{gao2021real}提出了一种基于反向传播神经网络(back-propagation neural network (BPNN))的重力预测模型，通过将规划航区内重力扰动信息作为数据集进行训练，用于纯惯导解算的实时补偿，其效果与用球谐模型补偿想同。缺点是因为其只关注于实时地去获取补偿数值，而忽略了其补偿的具体方案，并且只适用于预先规划的区域。同样的，文献\cite{ZHOUXIAO2016}利用小波神经网络对格网区域内重力扰动数据进行预测，相比于反距离加权插值结果，进行重力扰动补偿后其速度误差最大减小约0.2m/s，最大位置误差减小约3000m。
 
-\subsection{实时动态补偿}
+\subsection{动态测量补偿}
 文献\cite{yang2024autonomous}揭示了重力扰动、重力扰动率和重力扰动梯度之间的内在耦合关系，建立了能准确反映重力扰动时变特性的状态空间模型，并针对旋转惯导系统，提出了一种自主高精度重力扰动实时估计和补偿的方案，车载试验的水平定位精度优于50m。该方法的优势在于其利用了激光多普勒测速仪、气压高度计测量的导航信息不受重力扰动影响这一特点，从而隔离了重力扰动与导航信息的耦合，在建立准确的测量模型基础上，由于旋转惯导能够绕z轴和x轴周期性旋转，加快了惯性传感器偏差和重力扰动分量的分离速度，因此可以在不需要车辆爬升的情况下实现z轴加速度计偏差与向上重力扰动的分离，从而有效地对于旋转惯导的输出结果进行动态补偿。
 \subsection{滤波估计补偿}
-垂线偏差会对引入姿态解算误差，文献\cite{an2021method}为了解决捷联惯导动态测量的问题，利用衰减记忆卡尔曼滤波器估计DOV补偿后的姿态角，并将其作为基准与捷联惯导系统得到的姿态角进行差分，得到最终轨迹上的垂线偏差值。但是，该方法没有基于初始对准的过程对姿态误差进行研究，如果初始对准的结果不准确，可能会导致整个导航过程中误差的积累。
+垂线偏差会对引入姿态解算误差，文献\cite{an2021method}为了解决捷联惯导动态测量的问题，利用衰减记忆卡尔曼滤波器估计DOV补偿后的姿态角，并将其作为基准与捷联惯导系统得到的姿态角进行差分，得到最终轨迹上的垂线偏差值。但是，该方法没有基于初始对准的过程对姿态误差进行研究，如果初始对准的结果不准确，可能会导致整个导航过程中误差的积累。文献\cite{stepanov2020algorithms}则基于船舶起伏模型并使用Rao-Blackwellised filter滤波器来对遗传算法的参数进行识别得到了更为精确的重力估计值。
 \subsection{多源融合补偿}
 
 \subsection{智能决策算法补偿}
 
 除了以上具体的方法外，相关研究人员针对不同场景和地理环境提出了相应的补偿方法，比如文献\cite{LIQIAN2022}研究的在极区环境下实现重力扰动补偿。
 \section{总结与展望}
-
+球谐模型补偿方法对设备硬件的计算或者存储成本是一个很大的挑战，
 
 \newpage
 \subsection{致谢}
