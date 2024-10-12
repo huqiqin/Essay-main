@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{gelb1968geodetic}
 A~Gelb.
@@ -145,6 +145,11 @@ L~Bastos, P~Tom{\'e}, T~Cunha, MJ~Fernandes, and S~Cunha.
 \newblock {Gravity anomalies from airborne Measurements—Experiments using a low cost IMU device}.
 \newblock In {\em Gravity, Geoid and Geodynamics 2000: GGG2000 IAG International Symposium Banff, Alberta, Canada July 31--August 4, 2000}, pages 253--258. Springer, 2002.
 
+\bibitem{becker2015drift}
+David Becker, J~Emil Nielsen, Diogo Ayres-Sampaio, Ren{\'e} Forsberg, Matthias Becker, and Lu{\'\i}sa Bastos.
+\newblock Drift reduction in strapdown airborne gravimetry using a simple thermal correction.
+\newblock {\em Journal of geodesy}, 89:1133--1144, 2015.
+
 \bibitem{peshekhonovstate}
 VG~Peshekhonov, OA~Stepanov, VG~Rozentsvein, AA~Krasnov, and AV~Sokolov.
 \newblock {State-of-the-art strapdown airborne gravimeters: Analysis of the development, Gyroscopy and Navigation, vol. 13, no. 4}, 2022.
@@ -199,10 +204,20 @@ M~Hoss, A~Dreyer, EL~von Hinueber, R~Urli, and F~Lapeyrade.
 \newblock {1.3 Innovative Inertial Measurement Data Acquisition and Processing for Aircraft Surveying up to Airborne Gravimetry}.
 \newblock {\em Proceedings-ettc2020}, pages 38--47, 2020.
 
+\bibitem{ayres2015comparison}
+Diogo Ayres-Sampaio, Richard Deurloo, Machiel Bos, Am{\'e}rico Magalh{\~a}es, and Lu{\'\i}sa Bastos.
+\newblock A comparison between three imus for strapdown airborne gravimetry.
+\newblock {\em Surveys in geophysics}, 36:571--586, 2015.
+
 \bibitem{xiurui}
 Rui XIU, Gang GUO, Zhengbing XUE, Dongming LI, and Haibing LI.
 \newblock {Technical Current Situation and New Application of Marine/aviation Gravimeter}.
 \newblock {\em Navigation and Control}, pages 35--43, 2019.
+
+\bibitem{huang2012sga}
+Yangming Huang, Arne~Vestergaard Olesen, Meiping Wu, and Kaidong Zhang.
+\newblock Sga-wz: A new strapdown airborne gravimeter.
+\newblock {\em Sensors}, 12(7):9336--9348, 2012.
 
 \bibitem{yuan2020performance}
 Yuan YUAN, Jinyao GAO, Zhaocai WU, Zhongyan SHEN, and Guochao WU.
@@ -284,6 +299,11 @@ Jing ZHU.
 \newblock {\em Study on Gravity aided Technologies inShipborne Attitude Measurement with Ring Laser Gyro}.
 \newblock PhD thesis, National University of Defense Technology, 2018.
 
+\bibitem{harriman1986gravity}
+David~W Harriman and J~Chris Harrison.
+\newblock Gravity-induced errors in airborne inertial navigation.
+\newblock {\em Journal of Guidance, Control, and Dynamics}, 9(4):419--426, 1986.
+
 \bibitem{LUOKAIXIN2023}
 Kaixin LUO.
 \newblock {\em {Research on Key Technologies of Ocean Gravity-Aided Inertial Navigation}}.
@@ -308,6 +328,11 @@ Panpan Zhang, Lin Wu, Lifeng Bao, Bo~Wang, Hui Liu, Qianqian Li, and Yong Wang.
 Junbo Tie, Meiping Wu, Juliang Cao, Junxiang Lian, and Shaokun Cai.
 \newblock The impact of initial alignment on compensation for deflection of vertical in inertial navigation.
 \newblock In {\em 2017 IEEE International Conference on Cybernetics and Intelligent Systems (CIS) and IEEE Conference on Robotics, Automation and Mechatronics (RAM)}, pages 381--386. IEEE, 2017.
+
+\bibitem{tie2018compensation}
+Junbo Tie, Juliang Cao, Meiping Wu, Junxiang Lian, Shaokun Cai, and Lin Wang.
+\newblock Compensation of horizontal gravity disturbances for high precision inertial navigation.
+\newblock {\em Sensors}, 18(3):906, 2018.
 
 \bibitem{lerch1972gravitational}
 FJ~Lerch, CA~Wagner, DE~Smith, ML~Andson, JE~Brownd, and JA~Richardson.
@@ -414,6 +439,11 @@ Mingfei ZHONG, Dejun ZHAN, Rong XU, and Lin ZHONG.
 \newblock {Research on The Effects of Gravity Disturbances onHigh-Precision RLG Attitude Measurement System}.
 \newblock In {\em The 6th China Satellite Navigation Academic Conference}, pages 77--81. China Satellite Maritime Tracking and Controlling Department, Jiangyin 214431, China;College of Opto-electronics Science and Eigneering, National University of Defense Technology,Changsha 410073，China, 2015.
 
+\bibitem{zhou2016improved}
+Xiao Zhou, Gongliu Yang, Jing Wang, and Jing Li.
+\newblock An improved gravity compensation method for high-precision free-ins based on mec--bp--adaboost.
+\newblock {\em Measurement Science and Technology}, 27(12):125007, 2016.
+
 \bibitem{an2021method}
 Wen An, Jiangning Xu, Hongyang He, and Pengfei Jiang.
 \newblock A method of deflection of the vertical measurement based on attitude difference compensation.
@@ -434,10 +464,85 @@ Hao Xiong, Yingwei Zhao, Xingshu Wang, Dongkai Dai, Jiaxing Zheng, and Dejun Zha
 \newblock An analysis of the effect of gravity anomaly to height estimation in high-precision ins/gnss integrated navigation systems.
 \newblock {\em IEEE Sensors journal}, 19(7):2713--2721, 2018.
 
+\bibitem{fang2013accurate}
+Jiancheng Fang, Linzhouting Chen, and Jifeng Yao.
+\newblock An accurate gravity compensation method for high-precision airborne pos.
+\newblock {\em IEEE Transactions on Geoscience and Remote Sensing}, 52(8):4564--4573, 2013.
+
 \bibitem{DKXB20050100F}
 WANG Hubiao, Yong WANG, Yang LU, and Jingang ZHAN.
 \newblock {Inversion of Marine Gravity anomalies by Combinating Multi-altimeter Data and Shipborne gravimetric Data}.
 \newblock {\em {Journal of Geodesy and Geodynamics}}, (01):81--85, 2005.
+
+\bibitem{1020160654.nh}
+Fangming LI.
+\newblock {\em {Research on Underwater Gravity AidedPositioning and Gravity Map Navigability Analysis}}.
+\newblock PhD thesis, Harbin Engineering University, 2020.
+
+\bibitem{kern2003analysis}
+Michael Kern.
+\newblock {\em An analysis of the combination and downward continuation of satellite, airborne and terrestrial gravity data}.
+\newblock Citeseer, 2003.
+
+\bibitem{2009059209.nh}
+Yi~CHEN.
+\newblock {\em {A Study on Heterogeneous Marine Gravity Data Combination Technology}}.
+\newblock PhD thesis, {Harbin Engineering University}, 2008.
+
+\bibitem{HYCH201303004}
+Motao HUANG, Yongzhong OUYANG, Guojun ZHAI, et~al.
+\newblock Tikhonov regularization collocation for multi-source gravity data fusion processing.
+\newblock {\em {Hydrographic Surveying and Charting}}, 33(03):6--12, 2013.
+
+\bibitem{1022810006.nh}
+Zhiming XIONG.
+\newblock {\em {Research on Key Technologies forUnderwater Gravimetry Based On Multi-Sensor Fusion}}.
+\newblock PhD thesis, {National University of Defense Technology}, 2021.
+
+\bibitem{wittwer2009regional}
+TB~Wittwer.
+\newblock Regional gravity field modelling with radial basis functions.
+\newblock 2009.
+
+\bibitem{bentel2013different}
+Katrin Bentel, Michael Schmidt, and Christian Gerlach.
+\newblock Different radial basis functions and their applicability for regional gravity field representation on the sphere.
+\newblock {\em GEM-International Journal on Geomathematics}, 4:67--96, 2013.
+
+\bibitem{bentel2016combining}
+Katrin Bentel and Michael Schmidt.
+\newblock Combining different types of gravity observations in regional gravity modeling in spherical radial basis functions.
+\newblock In {\em VIII Hotine-Marussi Symposium on Mathematical Geodesy: Proceedings of the Symposium in Rome, 17-21 June, 2013}, pages 115--120. Springer, 2016.
+
+\bibitem{pham2009solutions}
+TD~Pham and T~Tran.
+\newblock Solutions to pseudodifferential equations using spherical radial basis functions.
+\newblock {\em Bulletin of the Australian Mathematical Society}, 79(3):473--485, 2009.
+
+\bibitem{klees2008data}
+R~Klees, Robert Tenzer, I~Prutkin, and T~Wittwer.
+\newblock A data-driven approach to local gravity field modelling using spherical radial basis functions.
+\newblock {\em Journal of Geodesy}, 82:457--471, 2008.
+
+\bibitem{CHXB201609003}
+Zhiwei MA, Yang LU, Yi~TU, et~al.
+\newblock Ｒegional gravity field modeling with abel-poisson Ｒadial basis functions.
+\newblock {\em Acta Geodaetica et Cartographica Sinica}, 45(09):1019--1027, 2016.
+
+\bibitem{DQWX201704009}
+Fan YANG, Houze XU, Min ZHONG, et~al.
+\newblock Grace global temporal gravity recovery through the radial basis function approach.
+\newblock {\em Chinese Journal of Geophysics}, 60(04):1332--1346, 2017.
+
+\bibitem{mahbuby2017local}
+Hany Mahbuby, Abdolreza Safari, and Ismael Foroughi.
+\newblock Local gravity field modeling using spherical radial basis functions and a genetic algorithm.
+\newblock {\em Comptes Rendus. G{\'e}oscience}, 349(3):106--113, 2017.
+
+\bibitem{tenzer2008choice}
+Robert Tenzer and R~Klees.
+\newblock The choice of the spherical radial basis functions in local gravity field modeling.
+\newblock {\em Studia Geophysica et Geodaetica}, 52:287--304, 2008.
 
 \bibitem{LIQIAN2022}
 Qian LI, Dezhao WANG, Yuren JI, et~al.

@@ -8,45 +8,46 @@ Warning--there's a number but no volume in johann2019direct
 Warning--empty booktitle in berzhitskii2010airborne
 Warning--empty institution in lerch1972gravitational
 Warning--there's a number but no volume in DKXB20050100F
-You've used 89 entries,
+Warning--empty journal in wittwer2009regional
+You've used 110 entries,
             1791 wiz_defined-function locations,
-            970 strings with 20865 characters,
-and the built_in function-call counts, 22940 in all, are:
-= -- 2075
-> -- 1085
-< -- 20
-+ -- 399
-- -- 310
-* -- 1686
-:= -- 3622
-add.period$ -- 274
-call.type$ -- 89
-change.case$ -- 82
+            1081 strings with 24686 characters,
+and the built_in function-call counts, 27808 in all, are:
+= -- 2517
+> -- 1311
+< -- 21
++ -- 483
+- -- 373
+* -- 2048
+:= -- 4419
+add.period$ -- 338
+call.type$ -- 110
+change.case$ -- 99
 chr.to.int$ -- 0
-cite$ -- 94
-duplicate$ -- 959
-empty$ -- 2122
-format.name$ -- 310
-if$ -- 5081
+cite$ -- 116
+duplicate$ -- 1154
+empty$ -- 2581
+format.name$ -- 373
+if$ -- 6136
 int.to.chr$ -- 0
-int.to.str$ -- 89
-missing$ -- 87
-newline$ -- 447
-num.names$ -- 89
-pop$ -- 196
+int.to.str$ -- 110
+missing$ -- 106
+newline$ -- 552
+num.names$ -- 110
+pop$ -- 235
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 451
+skip$ -- 524
 stack$ -- 0
-substring$ -- 1800
-swap$ -- 245
-text.length$ -- 20
+substring$ -- 2187
+swap$ -- 275
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 5
-while$ -- 232
-width$ -- 91
-write$ -- 979
-(There were 5 warnings)
+warning$ -- 6
+while$ -- 281
+width$ -- 113
+write$ -- 1208
+(There were 6 warnings)
