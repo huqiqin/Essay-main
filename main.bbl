@@ -65,6 +65,21 @@ Jay~Hyoun Kwon and Ch~Jekeli.
 \newblock A new approach for airborne vector gravimetry using gps/ins.
 \newblock {\em Journal of Geodesy}, 74(10):690--700, 2001.
 
+\bibitem{reigber2002champ}
+Ch~Reigber, Hermann L{\"u}hr, and P~Schwintzer.
+\newblock Champ mission status.
+\newblock {\em Advances in space research}, 30(2):129--134, 2002.
+
+\bibitem{tapley1997teg}
+BD~Tapley, CK~Shum, JC~Ries, SR~Poole, PAM Abusali, SV~Bettadpur, RJ~Eanes, MC~Kim, HJ~Rim, and BE~Schutz.
+\newblock The teg-3 geopotential model.
+\newblock In {\em Gravity, Geoid and Marine Geodesy: International Symposium No. 117 Tokyo, Japan, September 30--October 5, 1996}, pages 453--460. Springer, 1997.
+
+\bibitem{drinkwater2003vii}
+MR~Drinkwater, Rune Floberghagen, R~Haagmans, D~Muzi, and A~Popescu.
+\newblock Vii: Closing session: Goce: Esa's first earth explorer core mission.
+\newblock {\em Space science reviews}, 108(1):419--432, 2003.
+
 \bibitem{ZGZC201808001017}
 Jin LI, Yue CHENG, and Ningyang WEI.
 \newblock {Research status of Marine gravimeter}.
@@ -254,6 +269,16 @@ Lubin CHANG, Fangjun QIN, and Meiping WU.
 \newblock Gravity disturbance compensation for inertial navigation system.
 \newblock {\em IEEE Transactions on Instrumentation and Measurement}, 68(10):3751--3765, 2018.
 
+\bibitem{grejner1998gravity}
+DOROTA~A GREJNER-BRZEZINSKA and Jin Wang.
+\newblock Gravity modeling for high-accuracy gps/ins integration.
+\newblock {\em Navigation}, 45(3):209--220, 1998.
+
+\bibitem{dai2015dynamic}
+Dongkai Dai, Xingshu Wang, Dejun Zhan, Shiqiao Qin, and Zongsheng Huang.
+\newblock Dynamic measurement of high-frequency deflections of the vertical based on the observation of ins/gnss integration attitude error.
+\newblock {\em Journal of Applied Geophysics}, 119:89--98, 2015.
+
 \bibitem{1020386196.nh}
 Jing ZHU.
 \newblock {\em Study on Gravity aided Technologies inShipborne Attitude Measurement with Ring Laser Gyro}.
@@ -288,11 +313,6 @@ Junbo Tie, Meiping Wu, Juliang Cao, Junxiang Lian, and Shaokun Cai.
 FJ~Lerch, CA~Wagner, DE~Smith, ML~Andson, JE~Brownd, and JA~Richardson.
 \newblock Gravitational field models for the earth (gem 1 and 2).
 \newblock Technical report, 1972.
-
-\bibitem{tapley1997teg}
-BD~Tapley, CK~Shum, JC~Ries, SR~Poole, PAM Abusali, SV~Bettadpur, RJ~Eanes, MC~Kim, HJ~Rim, and BE~Schutz.
-\newblock The teg-3 geopotential model.
-\newblock In {\em Gravity, Geoid and Marine Geodesy: International Symposium No. 117 Tokyo, Japan, September 30--October 5, 1996}, pages 453--460. Springer, 1997.
 
 \bibitem{pavlis2012development}
 Nikolaos~K Pavlis, Simon~A Holmes, Steve~C Kenyon, and John~K Factor.
@@ -339,6 +359,11 @@ Jinyun Guo, Hongxin Luo, Chengcheng Zhu, Hui Ji, Guowei Li, and Xin Liu.
 \newblock Accuracy comparison of marine gravity derived from hy-2a/gm and cryosat-2 altimetry data: a case study in the gulf of mexico.
 \newblock {\em Geophysical Journal International}, 230(2):1267--1279, 2022.
 
+\bibitem{ince2019icgem}
+E~Sinem Ince, Franz Barthelmes, Sven Rei{\ss}land, Kirsten Elger, Christoph F{\"o}rste, Frank Flechtner, and Harald Schuh.
+\newblock Icgem--15 years of successful collection and distribution of global gravitational models, associated services, and future plans.
+\newblock {\em Earth system science data}, 11(2):647--674, 2019.
+
 \bibitem{ning1994spherical}
 JS~Ning, DB~Chao, and JC~Li.
 \newblock The spherical convolution form of vening-meinesz formula.
@@ -384,6 +409,11 @@ Jie Yang, Xinlong Wang, Bin Wang, and Xiaodong Hu.
 \newblock An autonomous and high-accuracy gravity disturbance compensation scheme for rotary inertial navigation system.
 \newblock {\em Measurement Science and Technology}, 35(8):086302, 2024.
 
+\bibitem{WXDH201505008015}
+Mingfei ZHONG, Dejun ZHAN, Rong XU, and Lin ZHONG.
+\newblock {Research on The Effects of Gravity Disturbances onHigh-Precision RLG Attitude Measurement System}.
+\newblock In {\em The 6th China Satellite Navigation Academic Conference}, pages 77--81. China Satellite Maritime Tracking and Controlling Department, Jiangyin 214431, China;College of Opto-electronics Science and Eigneering, National University of Defense Technology,Changsha 410073，China, 2015.
+
 \bibitem{an2021method}
 Wen An, Jiangning Xu, Hongyang He, and Pengfei Jiang.
 \newblock A method of deflection of the vertical measurement based on attitude difference compensation.
@@ -393,6 +423,21 @@ Wen An, Jiangning Xu, Hongyang He, and Pengfei Jiang.
 Oleg~A Stepanov, Dmitry~A Koshaev, Andrei~V Motorin, Anton~A Krasnov, and Alexander~V Sokolov.
 \newblock Algorithms for integrated processing of marine gravimeter data and gnss measurements.
 \newblock {\em IFAC-PapersOnLine}, 53(2):500--505, 2020.
+
+\bibitem{ZGXJ201506005}
+Xiao ZHOU, Gongliu YANG, Jing WANG, et~al.
+\newblock Estimation and compensation for gravity disturbance based on kalman filtering in inertial navigation.
+\newblock {\em Journal of Chinese Inertial Technology}, 23(06):721--726, 2015.
+
+\bibitem{xiong2018analysis}
+Hao Xiong, Yingwei Zhao, Xingshu Wang, Dongkai Dai, Jiaxing Zheng, and Dejun Zhan.
+\newblock An analysis of the effect of gravity anomaly to height estimation in high-precision ins/gnss integrated navigation systems.
+\newblock {\em IEEE Sensors journal}, 19(7):2713--2721, 2018.
+
+\bibitem{DKXB20050100F}
+WANG Hubiao, Yong WANG, Yang LU, and Jingang ZHAN.
+\newblock {Inversion of Marine Gravity anomalies by Combinating Multi-altimeter Data and Shipborne gravimetric Data}.
+\newblock {\em {Journal of Geodesy and Geodynamics}}, (01):81--85, 2005.
 
 \bibitem{LIQIAN2022}
 Qian LI, Dezhao WANG, Yuren JI, et~al.

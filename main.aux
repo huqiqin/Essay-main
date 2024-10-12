@@ -13,14 +13,14 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand\HyField@AuxAddToFields[1]{}
-\providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand*\HyPL@Entry[1]{}
 \bibstyle{unsrt}
 \citation{gelb1968geodetic}
 \citation{peshekhonov2020problem}
 \citation{article}
 \citation{moryl1997advanced}
 \citation{WHCH20240724001}
+\HyPL@Entry{0<</S/D>>}
 \babel@aux{nil}{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}介绍}{1}{section.1}\protected@file@percent }
 \citation{snelders1989christiaan}
@@ -28,6 +28,8 @@
 \citation{chendaiyong}
 \citation{schwarz1995some}
 \citation{hirt2013new,liang2020high,kwon2001new}
+\citation{reigber2002champ}
+\citation{tapley1997teg,drinkwater2003vii,liang2020high}
 \citation{ZGZC201808001017}
 \citation{1021532813.nh}
 \@writefile{toc}{\contentsline {section}{\numberline {2}重力测量}{2}{section.2}\protected@file@percent }
@@ -58,10 +60,6 @@
 \citation{jekeli1994airborne}
 \citation{jekeli1997gps}
 \citation{johann2019direct}
-\citation{jekeli1994airborne,jordan1972self}
-\citation{bruton2000improving,nassar2004modeling}
-\citation{schwarz1997introduction}
-\citation{jekeli2023inertial}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \relax }}{6}{figure.caption.3}\protected@file@percent }
 \newlabel{fig_1}{{2}{6}{\relax }{figure.caption.3}{}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {椭球模型及大地水准面}}}{6}{figure.caption.3}\protected@file@percent }
@@ -70,33 +68,37 @@
 \newlabel{equ_2}{{2}{6}{定义}{equation.3.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}测量方法}{6}{subsection.3.2}\protected@file@percent }
 \newlabel{equ_3}{{3}{6}{测量方法}{equation.3.3}{}}
+\citation{jekeli1994airborne,jordan1972self}
+\citation{bruton2000improving,nassar2004modeling}
+\citation{schwarz1997introduction}
+\citation{jekeli2023inertial}
 \citation{WHCH20240724001}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 直接测量\relax }}{7}{figure.caption.4}\protected@file@percent }
 \newlabel{fig:direct}{{3}{7}{直接测量\relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}重力扰动对惯导解算的误差影响}{7}{section.4}\protected@file@percent }
 \citation{harlan1968eotvos}
-\citation{schwarz1995some}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 间接测量\relax }}{8}{figure.caption.5}\protected@file@percent }
 \newlabel{fig:indirect}{{4}{8}{间接测量\relax }{figure.caption.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}重力扰动的误差模型}{8}{subsection.4.1}\protected@file@percent }
 \newlabel{equ_delta_g}{{4}{8}{重力扰动的误差模型}{equation.4.4}{}}
 \newlabel{equ_delta_g_more}{{5}{8}{重力扰动的误差模型}{equation.4.5}{}}
-\newlabel{equ_diff_disturb}{{6}{8}{重力扰动的误差模型}{equation.4.6}{}}
+\citation{schwarz1995some}
 \citation{hao2024methods}
 \citation{gao2021real}
 \citation{WANGJING2016}
 \citation{chang2018gravity}
+\citation{grejner1998gravity,dai2015dynamic}
+\newlabel{equ_diff_disturb}{{6}{9}{重力扰动的误差模型}{equation.4.6}{}}
 \newlabel{equ_diff_disturb_more}{{7}{9}{重力扰动的误差模型}{equation.4.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}对速度的影响}{9}{subsection.4.2}\protected@file@percent }
 \newlabel{acc_bias}{{8}{9}{对速度的影响}{equation.4.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}对姿态的影响}{9}{subsection.4.3}\protected@file@percent }
-\newlabel{gyro_bias}{{9}{9}{对姿态的影响}{equation.4.9}{}}
 \citation{jekeli1994airborne,1020386196.nh}
 \citation{LUOKAIXIN2023}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}对姿态的影响}{10}{subsection.4.3}\protected@file@percent }
+\newlabel{gyro_bias}{{9}{10}{对姿态的影响}{equation.4.9}{}}
 \newlabel{equ_phi_more}{{10}{10}{对姿态的影响}{equation.4.10}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}对初始对准的影响}{10}{subsection.4.4}\protected@file@percent }
 \newlabel{equ_phi_align}{{12}{10}{对初始对准的影响}{equation.4.12}{}}
-\newlabel{equ_phi_delta_align}{{13}{10}{对初始对准的影响}{equation.4.13}{}}
 \citation{soler2014deflection}
 \citation{1020386196.nh}
 \citation{hao2022analysis}
@@ -106,24 +108,36 @@
 \citation{lerch1972gravitational,tapley1997teg}
 \citation{pavlis2012development,flechtner2021satellite}
 \citation{jiang2019measurement,liu2020preliminary,wan2020vertical,zhang2020inversion,zhu2019hy,ji2021deflections,guo2022accuracy,guo2022accuracy}
+\citation{ince2019icgem}
+\citation{ince2019icgem}
+\newlabel{equ_phi_delta_align}{{13}{11}{对初始对准的影响}{equation.4.13}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}现有的补偿方法及策略}{11}{section.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}球谐模型补偿}{11}{subsection.5.1}\protected@file@percent }
 \citation{hao2022analysis}
 \citation{ning1994spherical,chen1982methods,ning2006refined}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces 利用球谐模型提取重力扰动值\textsuperscript  {\textsuperscript  {\cite  {ince2019icgem}}}\relax }}{12}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:model_ICGEM}{{5}{12}{利用球谐模型提取重力扰动值\upcite {ince2019icgem}\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {EIGEN-6C4模型与EGM2008模型重力异常差值}}}{12}{figure.caption.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {EIGEN-6C4重力扰动网格计算结果}}}{12}{figure.caption.6}\protected@file@percent }
 \citation{wang2016application}
 \citation{wu2016gravity}
 \citation{zhu2019research,weng2020analysis}
 \citation{gao2021real}
 \citation{ZHOUXIAO2016}
 \citation{yang2024autonomous}
+\citation{WXDH201505008015}
 \citation{an2021method}
 \citation{stepanov2020algorithms}
-\citation{LIQIAN2022}
+\citation{ZGXJ201506005}
+\citation{xiong2018analysis}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}动态测量补偿}{13}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}滤波估计补偿}{13}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}多源融合补偿}{13}{subsection.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}智能决策算法补偿}{13}{subsection.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}总结与展望}{13}{section.6}\protected@file@percent }
+\citation{DKXB20050100F}
+\citation{LIQIAN2022}
+\citation{LUOKAIXIN2023}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}滤波估计补偿}{14}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}多源融合补偿}{14}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}智能决策算法补偿}{14}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}总结与展望}{14}{section.6}\protected@file@percent }
 \bibdata{sample}
 \bibcite{gelb1968geodetic}{{1}{}{{}}{{}}}
 \bibcite{peshekhonov2020problem}{{2}{}{{}}{{}}}
@@ -134,79 +148,88 @@
 \bibcite{szabo2016history}{{7}{}{{}}{{}}}
 \bibcite{veryaskin2021gravity}{{8}{}{{}}{{}}}
 \bibcite{chendaiyong}{{9}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}致谢}{14}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}联系作者}{14}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}写作心得}{14}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}致谢}{15}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}联系作者}{15}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}写作心得}{15}{subsection.6.3}\protected@file@percent }
 \bibcite{schwarz1995some}{{10}{}{{}}{{}}}
 \bibcite{hirt2013new}{{11}{}{{}}{{}}}
 \bibcite{liang2020high}{{12}{}{{}}{{}}}
 \bibcite{kwon2001new}{{13}{}{{}}{{}}}
-\bibcite{ZGZC201808001017}{{14}{}{{}}{{}}}
-\bibcite{1021532813.nh}{{15}{}{{}}{{}}}
-\bibcite{DHKZ2020Z1020}{{16}{}{{}}{{}}}
-\bibcite{huang2017development}{{17}{}{{}}{{}}}
-\bibcite{lacoste1967lacoste}{{18}{}{{}}{{}}}
-\bibcite{Zongjie}{{19}{}{{}}{{}}}
-\bibcite{Reviewon}{{20}{}{{}}{{}}}
-\bibcite{Newlydeveloped}{{21}{}{{}}{{}}}
-\bibcite{valliant2019lacoste}{{22}{}{{}}{{}}}
-\bibcite{becker2016advanced}{{23}{}{{}}{{}}}
-\bibcite{johann2019direct}{{24}{}{{}}{{}}}
-\bibcite{wei1998flight}{{25}{}{{}}{{}}}
-\bibcite{bastos2002gravity}{{26}{}{{}}{{}}}
-\bibcite{peshekhonovstate}{{27}{}{{}}{{}}}
-\bibcite{thompson1959aerial}{{28}{}{{}}{{}}}
-\bibcite{thompson1960aerial}{{29}{}{{}}{{}}}
-\bibcite{brozena1989interferometric}{{30}{}{{}}{{}}}
-\bibcite{schwarz1989comparison}{{31}{}{{}}{{}}}
-\bibcite{kleusberg1990airborne}{{32}{}{{}}{{}}}
-\bibcite{bruton2000improving}{{33}{}{{}}{{}}}
-\bibcite{meyer2003angel}{{34}{}{{}}{{}}}
-\bibcite{boedecker2006sags4}{{35}{}{{}}{{}}}
-\bibcite{berzhitskii2010airborne}{{36}{}{{}}{{}}}
-\bibcite{hoss20201}{{37}{}{{}}{{}}}
-\bibcite{xiurui}{{38}{}{{}}{{}}}
-\bibcite{yuan2020performance}{{39}{}{{}}{{}}}
-\bibcite{somigliana1929teoria}{{40}{}{{}}{{}}}
-\bibcite{jekeli1994airborne}{{41}{}{{}}{{}}}
-\bibcite{jekeli1997gps}{{42}{}{{}}{{}}}
-\bibcite{jordan1972self}{{43}{}{{}}{{}}}
-\bibcite{nassar2004modeling}{{44}{}{{}}{{}}}
-\bibcite{schwarz1997introduction}{{45}{}{{}}{{}}}
-\bibcite{jekeli2023inertial}{{46}{}{{}}{{}}}
-\bibcite{harlan1968eotvos}{{47}{}{{}}{{}}}
-\bibcite{hao2024methods}{{48}{}{{}}{{}}}
-\bibcite{gao2021real}{{49}{}{{}}{{}}}
-\bibcite{WANGJING2016}{{50}{}{{}}{{}}}
-\bibcite{chang2018gravity}{{51}{}{{}}{{}}}
-\bibcite{1020386196.nh}{{52}{}{{}}{{}}}
-\bibcite{LUOKAIXIN2023}{{53}{}{{}}{{}}}
-\bibcite{soler2014deflection}{{54}{}{{}}{{}}}
-\bibcite{hao2022analysis}{{55}{}{{}}{{}}}
-\bibcite{zhang2023gravity}{{56}{}{{}}{{}}}
-\bibcite{TIE2017impact}{{57}{}{{}}{{}}}
-\bibcite{lerch1972gravitational}{{58}{}{{}}{{}}}
-\bibcite{tapley1997teg}{{59}{}{{}}{{}}}
-\bibcite{pavlis2012development}{{60}{}{{}}{{}}}
-\bibcite{flechtner2021satellite}{{61}{}{{}}{{}}}
-\bibcite{jiang2019measurement}{{62}{}{{}}{{}}}
-\bibcite{liu2020preliminary}{{63}{}{{}}{{}}}
-\bibcite{wan2020vertical}{{64}{}{{}}{{}}}
-\bibcite{zhang2020inversion}{{65}{}{{}}{{}}}
-\bibcite{zhu2019hy}{{66}{}{{}}{{}}}
-\bibcite{ji2021deflections}{{67}{}{{}}{{}}}
-\bibcite{guo2022accuracy}{{68}{}{{}}{{}}}
-\bibcite{ning1994spherical}{{69}{}{{}}{{}}}
-\bibcite{chen1982methods}{{70}{}{{}}{{}}}
-\bibcite{ning2006refined}{{71}{}{{}}{{}}}
-\bibcite{wang2016application}{{72}{}{{}}{{}}}
-\bibcite{wu2016gravity}{{73}{}{{}}{{}}}
-\bibcite{zhu2019research}{{74}{}{{}}{{}}}
-\bibcite{weng2020analysis}{{75}{}{{}}{{}}}
-\bibcite{ZHOUXIAO2016}{{76}{}{{}}{{}}}
-\bibcite{yang2024autonomous}{{77}{}{{}}{{}}}
-\bibcite{an2021method}{{78}{}{{}}{{}}}
-\bibcite{stepanov2020algorithms}{{79}{}{{}}{{}}}
-\bibcite{LIQIAN2022}{{80}{}{{}}{{}}}
+\bibcite{reigber2002champ}{{14}{}{{}}{{}}}
+\bibcite{tapley1997teg}{{15}{}{{}}{{}}}
+\bibcite{drinkwater2003vii}{{16}{}{{}}{{}}}
+\bibcite{ZGZC201808001017}{{17}{}{{}}{{}}}
+\bibcite{1021532813.nh}{{18}{}{{}}{{}}}
+\bibcite{DHKZ2020Z1020}{{19}{}{{}}{{}}}
+\bibcite{huang2017development}{{20}{}{{}}{{}}}
+\bibcite{lacoste1967lacoste}{{21}{}{{}}{{}}}
+\bibcite{Zongjie}{{22}{}{{}}{{}}}
+\bibcite{Reviewon}{{23}{}{{}}{{}}}
+\bibcite{Newlydeveloped}{{24}{}{{}}{{}}}
+\bibcite{valliant2019lacoste}{{25}{}{{}}{{}}}
+\bibcite{becker2016advanced}{{26}{}{{}}{{}}}
+\bibcite{johann2019direct}{{27}{}{{}}{{}}}
+\bibcite{wei1998flight}{{28}{}{{}}{{}}}
+\bibcite{bastos2002gravity}{{29}{}{{}}{{}}}
+\bibcite{peshekhonovstate}{{30}{}{{}}{{}}}
+\bibcite{thompson1959aerial}{{31}{}{{}}{{}}}
+\bibcite{thompson1960aerial}{{32}{}{{}}{{}}}
+\bibcite{brozena1989interferometric}{{33}{}{{}}{{}}}
+\bibcite{schwarz1989comparison}{{34}{}{{}}{{}}}
+\bibcite{kleusberg1990airborne}{{35}{}{{}}{{}}}
+\bibcite{bruton2000improving}{{36}{}{{}}{{}}}
+\bibcite{meyer2003angel}{{37}{}{{}}{{}}}
+\bibcite{boedecker2006sags4}{{38}{}{{}}{{}}}
+\bibcite{berzhitskii2010airborne}{{39}{}{{}}{{}}}
+\bibcite{hoss20201}{{40}{}{{}}{{}}}
+\bibcite{xiurui}{{41}{}{{}}{{}}}
+\bibcite{yuan2020performance}{{42}{}{{}}{{}}}
+\bibcite{somigliana1929teoria}{{43}{}{{}}{{}}}
+\bibcite{jekeli1994airborne}{{44}{}{{}}{{}}}
+\bibcite{jekeli1997gps}{{45}{}{{}}{{}}}
+\bibcite{jordan1972self}{{46}{}{{}}{{}}}
+\bibcite{nassar2004modeling}{{47}{}{{}}{{}}}
+\bibcite{schwarz1997introduction}{{48}{}{{}}{{}}}
+\bibcite{jekeli2023inertial}{{49}{}{{}}{{}}}
+\bibcite{harlan1968eotvos}{{50}{}{{}}{{}}}
+\bibcite{hao2024methods}{{51}{}{{}}{{}}}
+\bibcite{gao2021real}{{52}{}{{}}{{}}}
+\bibcite{WANGJING2016}{{53}{}{{}}{{}}}
+\bibcite{chang2018gravity}{{54}{}{{}}{{}}}
+\bibcite{grejner1998gravity}{{55}{}{{}}{{}}}
+\bibcite{dai2015dynamic}{{56}{}{{}}{{}}}
+\bibcite{1020386196.nh}{{57}{}{{}}{{}}}
+\bibcite{LUOKAIXIN2023}{{58}{}{{}}{{}}}
+\bibcite{soler2014deflection}{{59}{}{{}}{{}}}
+\bibcite{hao2022analysis}{{60}{}{{}}{{}}}
+\bibcite{zhang2023gravity}{{61}{}{{}}{{}}}
+\bibcite{TIE2017impact}{{62}{}{{}}{{}}}
+\bibcite{lerch1972gravitational}{{63}{}{{}}{{}}}
+\bibcite{pavlis2012development}{{64}{}{{}}{{}}}
+\bibcite{flechtner2021satellite}{{65}{}{{}}{{}}}
+\bibcite{jiang2019measurement}{{66}{}{{}}{{}}}
+\bibcite{liu2020preliminary}{{67}{}{{}}{{}}}
+\bibcite{wan2020vertical}{{68}{}{{}}{{}}}
+\bibcite{zhang2020inversion}{{69}{}{{}}{{}}}
+\bibcite{zhu2019hy}{{70}{}{{}}{{}}}
+\bibcite{ji2021deflections}{{71}{}{{}}{{}}}
+\bibcite{guo2022accuracy}{{72}{}{{}}{{}}}
+\bibcite{ince2019icgem}{{73}{}{{}}{{}}}
+\bibcite{ning1994spherical}{{74}{}{{}}{{}}}
+\bibcite{chen1982methods}{{75}{}{{}}{{}}}
+\bibcite{ning2006refined}{{76}{}{{}}{{}}}
+\bibcite{wang2016application}{{77}{}{{}}{{}}}
+\bibcite{wu2016gravity}{{78}{}{{}}{{}}}
+\bibcite{zhu2019research}{{79}{}{{}}{{}}}
+\bibcite{weng2020analysis}{{80}{}{{}}{{}}}
+\bibcite{ZHOUXIAO2016}{{81}{}{{}}{{}}}
+\bibcite{yang2024autonomous}{{82}{}{{}}{{}}}
+\bibcite{WXDH201505008015}{{83}{}{{}}{{}}}
+\bibcite{an2021method}{{84}{}{{}}{{}}}
+\bibcite{stepanov2020algorithms}{{85}{}{{}}{{}}}
+\bibcite{ZGXJ201506005}{{86}{}{{}}{{}}}
+\bibcite{xiong2018analysis}{{87}{}{{}}{{}}}
+\bibcite{DKXB20050100F}{{88}{}{{}}{{}}}
+\bibcite{LIQIAN2022}{{89}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\gdef \@abspage@last{21}
+\gdef \@abspage@last{23}
