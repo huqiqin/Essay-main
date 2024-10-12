@@ -225,7 +225,7 @@
       \bm{\delta f}^b = \bm{b}_a + \bm{\kappa}_a \bm{f}^b + \bm{\text{N}}_a \bm{f}^b + \bm{w}_a
       \label{acc_bias}
 \end{equation}
-其中$\bm{b}_a$表示加速度计零偏，$\bm{\kappa}_a$为加速度计的比例因子误差矩阵，$\bm{\text{N}}_a$为交轴耦合误差矩阵，其元素表示三轴加速度计之间的非正交误差，$\bm{W}_a$表示加速度计测量值的白噪声。
+其中$\bm{b}_a$表示加速度计零偏，$\bm{\kappa}_a$为加速度计的比例因子误差矩阵，$\bm{\text{N}}_a$为交轴耦合误差矩阵，其元素表示三轴加速度计之间的非正交误差，$\bm{w}_a$表示加速度计测量值的白噪声。
 
 由式\ref{equ_delta_g}可知，重力扰动最直接影响的是加速度计对于速度的测量，特别体现在水平通道的影响上。水平速度在经过积分计算后，最终对载体位置的解算产生影响。文献\cite{gao2021real}通过设定不同大小重力扰动的仿真试验，发现当重力扰动大于100mGal时，纯惯性导航在一天内计算的最大位置误差将超过4海里，但作者设计的仿真缺少对误差传播特性的定量分析。相反，文献\cite{WANGJING2016}将重力扰动建模为一阶马尔可夫模型，借助相关性分析，定量的确定了重力扰动引起的位置误差量级。除此之外，由于速度误差受到比力测量精度和重力扰动的共同影响，换言之，重力扰动在水平分量的速度误差传播通道与加速度计的零偏相同，故可将重力扰动等效为加速度计零偏。常路宾等人结合这个特点\upcite{chang2018gravity}，具体研究了水平方向上加速度计零偏和重力扰动的关系，并结合两者之间的量级关系制定了相应的补偿策略。
 
@@ -255,7 +255,7 @@
 \end{equation}
 
 虽然姿态误差微分方程中没有直接体现重力扰动的表达式，但是结合前面重力扰动对速度误差的分析可以知道，重力扰动通过影响速度误差进而影响位置误差，最终二者共同影响姿态误差。
-此外，相关研究表明，当载体运动时，如果速度较大，姿态误差则主要由水平重力扰动的中低频分量($\lambda_0>30$km)引起；随着载体速度减小，高频分量则占主导地位，换句话说，低速运动的载体所经历的重力场细节特征作用更加明显，对姿态误差影响更大，因此确定水平重力扰动的高频信号是进一步提高重力补偿精度的关键\upcite{jekeli1994airborne,1020386196.nh,harriman1986gravity}。
+此外，相关研究表明，当载体运动时，如果速度较大，姿态误差则主要由水平重力扰动的中低频分量(波长$\lambda_0>30$km)引起；随着载体速度减小，高频分量则占主导地位，换句话说，低速运动的载体所经历的重力场细节特征作用更加明显，对姿态误差影响更大，因此确定水平重力扰动的高频信号是进一步提高重力补偿精度的关键\upcite{jekeli1994airborne,1020386196.nh,harriman1986gravity}。
 
 \subsection{对初始对准的影响}
 在惯导系统进行初始对准时期，在初始条件$v_D =v_E=0, \dot{v}_D=\dot{v}_E = 0, f_D = f_E = 0, f_U = \gamma$下，如果我们事先并不考虑重力扰动项\upcite{LUOKAIXIN2023}，而视作重力模型误差，将其带入速度误差微方程，可以得到
@@ -305,7 +305,7 @@
 
 \section{现有的补偿方法及策略}
 \subsection{球谐模型补偿}
-上个世纪70年代起，越来越多的卫星用于重力场的重建，其中GEM(Goddard Earth Model)和TEG(Texas Earth Gravity models)模型开发团队在联合重力建模工作上取得了重大进展\upcite{lerch1972gravitational,tapley1997teg}，但是其分辨率精度并不能满足实际需求。之后相继出现了EGM96,EGM2008和EIGEN-6C使得全球重力场模型的实际应用成为可能。大约自1991年以来，雷达测高已用于以厘米精度扫描海洋表面，有的工作在具有非常高空间分辨率但重复率相当适中的大地测量模式下，有的则是在具有高时间重复率但相对粗糙的地面轨迹网格的海洋学模式下。但是构建海洋重力场模型的不确定因素在于目前对海洋地形的模拟不足，即海面与大地水准面之间的高度差，而基于测高的海洋大地水准面和重力场模型是计算组合重力场模型的重要数据源\upcite{pavlis2012development,flechtner2021satellite}。中国于2011年发射了海洋-2A(Haiyang-2A,HY-2A)卫星，并于2016年改变轨道执行探测海洋重力异常的大地测量任务。几项调查证明\upcite{jiang2019measurement,liu2020preliminary,wan2020vertical,zhang2020inversion,zhu2019hy,ji2021deflections,guo2022accuracy,guo2022accuracy}，HY-2A具有接近其他测高卫星的精度。目前国际上可以准确估计重力场信息的公开球谐函数模型有美国国家地理空间情报局(National Geospatial-Intelligence Agency, NGA)发布的EGM2008和由德国波茨坦地球科学研究中心German Research Centre for Geosciences(GFZ Potsdam)发布的EIGEN-6C4，图\ref{fig:model_ICGEM}所示为EIGEN-6C4模型与EGM2008模型在亚洲地区重力异常的差值结果。
+上个世纪70年代起，越来越多的卫星用于重力场的重建，其中GEM(Goddard Earth Model)和TEG(Texas Earth Gravity models)模型开发团队在联合重力建模工作上取得了重大进展\upcite{lerch1972gravitational,tapley1997teg}，但是其分辨率精度并不能满足实际需求。之后相继出现了EGM96,EGM2008和EIGEN-6C使得全球重力场模型的实际应用成为可能。大约自1991年以来，雷达测高已用于以厘米精度扫描海洋表面，有的工作在具有非常高空间分辨率但重复率相当适中的大地测量模式下，有的则是在具有高时间重复率但相对粗糙的地面轨迹网格的海洋学模式下。但是构建海洋重力场模型的不确定因素在于目前对海洋地形的模拟不足，即海面与大地水准面之间的高度差，而基于测高的海洋大地水准面和重力场模型是计算组合重力场模型的重要数据源\upcite{pavlis2012development,flechtner2021satellite}。中国于2011年发射了海洋-2A(Haiyang-2A,HY-2A)卫星，并于2016年改变轨道执行探测海洋重力异常的大地测量任务。几项调查证明\upcite{jiang2019measurement,liu2020preliminary,wan2020vertical,zhang2020inversion,zhu2019hy,ji2021deflections,guo2022accuracy}，HY-2A具有接近其他测高卫星的精度。目前国际上可以准确估计重力场信息的公开球谐函数模型有美国国家地理空间情报局(National Geospatial-Intelligence Agency, NGA)发布的EGM2008和由德国波茨坦地球科学研究中心German Research Centre for Geosciences(GFZ Potsdam)发布的EIGEN-6C4，图\ref{fig:model_ICGEM}所示为EIGEN-6C4模型与EGM2008模型的相关计算结果。
 \begin{figure}
       \centering
       \subfigure[EIGEN-6C4模型与EGM2008模型重力异常差值]{
