@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: sample.bib
+Warning--there's a number but no series in becker2016advanced
+Warning--there's a number but no volume in johann2019direct
+Warning--empty booktitle in berzhitskii2010airborne
+Warning--empty institution in lerch1972gravitational
+Warning--there's a number but no volume in DKXB20050100F
+Warning--empty journal in wittwer2009regional
+You've used 110 entries,
+            1791 wiz_defined-function locations,
+            1081 strings with 24686 characters,
+and the built_in function-call counts, 27808 in all, are:
+= -- 2517
+> -- 1311
+< -- 21
++ -- 483
+- -- 373
+* -- 2048
+:= -- 4419
+add.period$ -- 338
+call.type$ -- 110
+change.case$ -- 99
+chr.to.int$ -- 0
+cite$ -- 116
+duplicate$ -- 1154
+empty$ -- 2581
+format.name$ -- 373
+if$ -- 6136
+int.to.chr$ -- 0
+int.to.str$ -- 110
+missing$ -- 106
+newline$ -- 552
+num.names$ -- 110
+pop$ -- 235
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 524
+stack$ -- 0
+substring$ -- 2187
+swap$ -- 275
+text.length$ -- 21
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 281
+width$ -- 113
+write$ -- 1208
+(There were 6 warnings)
