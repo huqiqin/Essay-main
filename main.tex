@@ -25,8 +25,17 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{epstopdf}
+\usepackage{fontspec} % 字体宏包
+% \usepackage[T1]{fontenc}
+% \usepackage{mathptmx} % 公式标准宏包
+\usepackage{txfonts}
+
+% 创建新指令
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}} % 使得参考文献变为上标
 \newcommand\keywords[1]{\textbf{关键字}: #1} %关键字环境
+\newcommand{\bmmathrm}[1]{\bm{\mathrm{#1}}}
+
+\setmainfont{Times New Roman} % 字体设置
 
 \title{重力补偿惯性导航技术的应用与发展}
 \author{胡其秦}
@@ -49,7 +58,7 @@
 
 \section{重力扰动定义}
 
-假设地球可以被近似为一个绕其短轴均匀旋转的椭球体，并且这个椭球体的表面是一个等势面，那么正常重力可以用Somigliana公式的泰勒级数展开来计算\upcite{somigliana1929teoria}。但是实际上地球并非一个理想的旋转椭球体，真实的重力与正常重力之间必然会存在一个偏差，如图\ref{fig_1}所示。在图a中$H$代表大地水准面高，$N$代表大地水准面相对于椭球表面的高度，$h_t$代表地形高度。我们通常将真实重力与正常重力之间的差值定义为重力扰动$\bm{\delta g} = \bm{g} - \bm{g}_0$，在北-东-地坐标系下，重力扰动在正常重力方向下的投影为重力异常$\Delta g = -\delta g_U $，真实重力与正常重力在水平方向的夹角称作垂线偏差，并定义在卯酉圈方向上绕东轴旋转为正，记为$\eta$；在子午圈方向上绕北轴旋转为正，记为$\xi$。当垂线偏差满足小角度条件(即重力扰动水平分量远小于正常重力大小)时，有如下的近似关系
+假设地球可以被近似为一个绕其短轴均匀旋转的椭球体，并且这个椭球体的表面是一个等势面，那么正常重力可以用Somigliana公式的泰勒级数展开来计算\upcite{somigliana1929teoria}。但是实际上地球并非一个理想的旋转椭球体，真实的重力与正常重力之间必然会存在一个偏差，如图\ref{fig_1}所示。在图a中$H$代表大地水准面高，$N$代表大地水准面相对于椭球表面的高度，$h_t$代表地形高度。我们通常将真实重力与正常重力之间的差值定义为重力扰动$\bmmathrm{\delta g} = \bmmathrm{g} - \bmmathrm{g}_0$，其中$\bmmathrm{\delta g} = \left [ \delta g_N ,\,\delta g_E ,\, {\delta g_D} \right ]^T $，$\bmmathrm{g}_0 = \left [ 0,\, 0, \, \gamma \right ]^T $。在北-东-地坐标系下，重力扰动在正常重力方向下的投影为重力异常$ \delta g_D = \Delta g$，真实重力与正常重力在水平方向的夹角称作垂线偏差，并定义在卯酉圈方向上绕东轴旋转为正，记为$\eta$；在子午圈方向上绕北轴旋转为正，记为$\xi$。当垂线偏差满足小角度条件(即重力扰动水平分量远小于正常重力大小)时，有如下的近似关系
  
 \begin{figure}[h]
       \centering
@@ -73,7 +82,7 @@
 \begin{equation}
       \begin{aligned}
             \eta & \approx -\delta g_E / \gamma \\
-            \xi  & \approx -\delta g_N / \gamma
+            \xi  & \approx \delta g_N / \gamma
       \end{aligned}
       \label{equ_1}
 \end{equation}
@@ -81,15 +90,15 @@
 根据几何关系可知，真实重力与正常重力、垂线偏差和重力异常之间的关系为
 \begin{equation}
       \begin{aligned}
-            \bm{g}^n & = \bm{\gamma}^n + \delta \bm{g}^n               \\
+            \bmmathrm{g}^n & = \bmmathrm{g}_0^n +  \bmmathrm{\delta g}^n               \\
                      & =\begin{bmatrix}
-                              0 & 0 & -\gamma
+                              0 & 0 & \gamma
                         \end{bmatrix}^T +
             \begin{bmatrix}
                   \delta g_E & \delta g_N & \delta g_U
             \end{bmatrix}^T                       \\
                      & = \begin{bmatrix}
-                               -\gamma\eta & -\gamma\xi & -\gamma - \Delta g
+                               -\gamma\eta & \gamma\xi & \gamma + \Delta g
                          \end{bmatrix}^T
       \end{aligned}
       \label{equ_2}
@@ -103,46 +112,51 @@
 \subsection{重力扰动的模型}
 在惯性导航中，我们常常通过构建位置、速度和姿态误差的微分方程来描述误差源随时间传播的规律。根据上一节描述的重力扰动模型，在惯导解算的速度微分方程中，有
 \begin{equation}
-      \bm{\delta g^n} = \dot{\bm{v}^n}-\bm{C}^n_b\bm{f}^b+(2\bm{w}^n_{ie}+\bm{w}^n_{en})\times \bm{v}^n- \bm{\gamma}^n
+      \dot{\bm{v}}^n = \bmmathrm{C}^n_b\bm{f}^b - (2\bm{\omega}^n_{ie}+\bm{\omega}^n_{en})\times \bm{v}^n + \bmmathrm{g}^n
       \label{equ_delta_g}
 \end{equation}
-在北-东-地坐标系下，可以得到其分量表示：
+在实际计算时，表示为
+\begin{equation*}
+      \dot{\hat{\bm{v}}}^n = \hat{\bmmathrm{C}}^n_b \hat{\bm{f}}^b - (2\hat{\bm{\omega}}^n_{ie}+\hat{\bm{\omega}}^n_{en})\times \hat{\bm{v}}^n + \bmmathrm{g}^n_0
+\end{equation*}
+在北-东-地坐标系下，结合式\ref{equ_2}的定义,当不考虑重力扰动时，可以得到重力扰动各分量在速度微分方程中的表示：
 \begin{equation}
       \left\{ \begin{aligned}
-      & \delta {{g}_{N}}={{{\dot{v}}}_{N}}-{{f}_{N}}+(2{{w}_{e}}\sin L+\frac{{{v}_{E}}\tan L}{{{R}_{N}}+h}){{v}_{E}}-\frac{{{v}_{N}}{{v}_{D}}}{{{R}_{M}}+h} \\ 
-      & \delta {{g}_{E}}={{{\dot{v}}}_{E}}-{{f}_{E}}-(\frac{{{v}_{E}}}{{{R}_{N}}+h}+2{{w}_{e}}\cos L)({{v}_{D}}+{{v}_{N}}\tan L) \\ 
-      & \delta {{g}_{D}}={{{\dot{v}}}_{D}}-{{f}_{D}}+\left[(2{{w}_{e}}\cos L+\frac{{{v}_{E}}}{{{R}_{N}}+h}){{v}_{E}} \right]+\frac{v_{N}^{2}}{{{R}_{M}}+h}-\gamma  \\ 
-\end{aligned} \right.
-\label{equ_delta_g_more}
+      & \delta {{g}_{N}}={{{\dot{v}}}_{N}}-{{f}_{N}}+(2{{\omega}_{e}}\sin L+\frac{{{v}_{E}}\tan L}{{{R}_{N}}+h}){{v}_{E}}-\frac{{{v}_{N}}{{v}_{D}}}{{{R}_{M}}+h} \\ 
+      & \delta {{g}_{E}}={{{\dot{v}}}_{E}}-{{f}_{E}}-(\frac{{{v}_{E}}}{{{R}_{N}}+h}+2{{\omega}_{e}}\cos L)({{v}_{D}}+{{v}_{N}}\tan L) \\ 
+      & \delta {{g}_{D}}={{{\dot{v}}}_{D}}-{{f}_{D}}+\left[(2{{\omega}_{e}}\cos L+\frac{{{v}_{E}}}{{{R}_{N}}+h}){{v}_{E}} \right]+\frac{v_{N}^{2}}{{{R}_{M}}+h}-\gamma  \\ 
+      \end{aligned} \right.
+      \label{equ_delta_g_more}
 \end{equation}
-其中，$R_N$和$R_M$分别表示卯酉圈半径和子午圈半径，$L$代表纬度，$w_{e}$表示地球自转角速度，等式$\delta g_D$右边的$\left[ \cdot  \right]$为厄特弗斯效应项\upcite{harlan1968eotvos}。如果我们事先不考虑正常重力的计算误差时，那么可以将$\bm{\delta g}$视作真实的重力扰动结果。但是当我们在速度微分方程中考虑重力扰动，并将其与正常重力分开时，那么由式\ref{equ_delta_g}可以进一步得到重力扰动的误差模型，
+
+其中，$R_N$和$R_M$分别表示卯酉圈半径和子午圈半径，$L$代表纬度，$w_{e}$表示地球自转角速度，等式$\delta g_D$右边的$\left[ \cdot  \right]$为厄特弗斯效应项\upcite{harlan1968eotvos}。如果我们事先不考虑正常重力的计算误差时，那么可以将$\bmmathrm{\delta g}$视作真实的重力扰动结果。但是当我们在速度微分方程中考虑重力扰动，并将其与正常重力分开时，那么由式\ref{equ_delta_g}可以进一步得到重力扰动的误差模型，
 \begin{equation}
       \begin{aligned}
-      \text{d}\bm{\delta g}^n = &\bm{\delta} \dot{\bm{v}}^n + \bm{[\phi^n\times]}\bm{C}^n_b \bm{f}^b - \bm{C}^n_b \bm{\delta f}^b + 
+      \text{d}\bmmathrm{\delta g}^n = -&\bm{\delta} \dot{\bm{v}}^n - \bm{[\phi^n\times]}\bmmathrm{C}^n_b \bmmathrm{f}^b + \bmmathrm{C}^n_b \bmmathrm{\delta f}^b  
       \\
-      &(2\bm{\delta w}^n_{ie} +\bm{\delta w}^n_{en})\bm{\times v}^n+(2\bm{w}^n_{ie} + \bm{w}^n_{en})\bm{\times \delta v}^n - \bm{\delta \gamma}^n
+      -&(2\bm{\delta \omega}^n_{ie} + \bm{\delta \omega}^n_{en})\bm{\times v}^n - (2\bm{\omega}^n_{ie} + \bm{\omega}^n_{en})\bm{\times \delta v}^n + \bmmathrm{\delta \gamma}^n
       \end{aligned}
       \label{equ_diff_disturb}
 \end{equation}
-其中，$\text{d}\bm{\delta g}^n$代表重力扰动的测量误差，$\bm{[\phi^n \times]}$是姿态误差$\bm{\phi^n}$的反对称矩阵，$\bm{\delta \gamma}^n$代表正常重力的计算模型误差(当考虑惯性导航系统和卫星导航系统存在同步时间差$\text{d}T$时\upcite{schwarz1995some}，式\ref{equ_diff_disturb}可以加入误差项$\ddot{\bm{v}}^n\text{d}T$)。因此，重力扰动的测量误差主要由动态加速度误差$\bm{\delta} \dot{\bm{v}}^n$、姿态误差$\bm{[\phi^n\times]}\bm{C}^n_b \bm{f}^b$和比力误差$\bm{C}^n_b \bm{\delta f}^b$引起。
+其中，$\text{d}\bmmathrm{\delta g}^n$代表重力扰动的测量误差，$\bm{[\phi^n \times]}$是姿态误差$\bm{\phi^n}$的反对称矩阵，$\bmmathrm{\delta \gamma}^n$代表正常重力的计算模型误差(当考虑惯性导航系统和卫星导航系统存在同步时间差$\text{d}T$时\upcite{schwarz1995some}，式\ref{equ_diff_disturb}可以加入误差项$\ddot{\bm{v}}^n\text{d}T$)。因此，重力扰动的测量误差主要由动态加速度误差$\bm{\delta} \dot{\bm{v}}^n$、姿态误差$\bm{[\phi^n\times]}\bmmathrm{C}^n_b \bmmathrm{f}^b$和比力误差$\bmmathrm{C}^n_b \bmmathrm{\delta f}^b$引起。
 
 \subsection{对速度的影响}
 加速度计的测量误差模型为：
 \begin{equation}
-      \bm{\delta f}^b = \bm{b}_a + \bm{\kappa}_a \bm{f}^b + \bm{N}_a \bm{f}^b + \bm{w}_a
+      \bm{\delta f}^b = \bm{b}_a + \bmmathrm{S}_a \bm{f}^b + \bmmathrm{N}_a \bm{f}^b + \bm{w}_a
       \label{acc_bias}
 \end{equation}
-其中$\bm{b}_a$表示加速度计零偏，$\bm{\kappa}_a$为加速度计的比例因子误差矩阵，$\bm{N}_a$为交轴耦合误差矩阵，其元素表示三轴加速度计之间的非正交误差，$\bm{w}_a$表示加速度计测量值的白噪声。
+其中$\bm{b}_a$表示加速度计零偏，$\bmmathrm{S}_a$为加速度计的比例因子误差矩阵，$\bmmathrm{N}_a$为交轴耦合误差矩阵，其元素表示三轴加速度计之间的非正交误差，$\bm{w}_a$表示加速度计测量值的白噪声。
 
 当事先不考虑重力扰动时，由式\ref{equ_delta_g}可得到速度误差的微分方程，
 \begin{equation}
       \begin{aligned}
-      \bm{\delta \dot{v}}^n = &\bm{C}^n_b \bm{\delta f}^b - \bm{[\phi^n\times]}\bm{C}^n_b \bm{f}^b -(2\bm{w}^n_{ie} + \bm{w}^n_{en}) \times \bm{\delta v}^n \\
-      &+ \bm{v}^n \times (2\bm{\delta w}^n_{ie} + \bm{\delta w}^n_{en}) + \bm{\delta g}^n
+      \bm{\delta \dot{v}}^n = &\bm{C}^n_b \bm{\delta f}^b - \bm{[\phi^n\times]}\bm{C}^n_b \bm{f}^b -(2\bm{\omega}^n_{ie} + \bm{\omega}^n_{en}) \times \bm{\delta v}^n \\
+      & + \bm{v}^n \times (2\bm{\delta \omega}^n_{ie} + \bm{\delta \omega}^n_{en}) - \bmmathrm{\delta g}^n
       \label{diff_delta_vel}
       \end{aligned}
 \end{equation}
-由\ref{diff_delta_vel}可以看出，重力扰动最直接影响的是加速度计对于速度的测量，特别体现在水平通道的上。而水平速度在经过积分计算后，最终对载体位置的解算产生影响。文献\cite{gao2021real}通过设定不同大小重力扰动的仿真试验，发现当重力扰动大于100mGal时，纯惯性导航在一天内计算的最大位置误差将超过4海里，但作者设计的仿真缺少对误差传播特性的定量分析。相反，文献\cite{WANGJING2016}将重力扰动建模为一阶马尔可夫模型，借助相关性分析，定量的确定了重力扰动引起的位置误差量级。除此之外，由于速度误差受到比力测量精度和重力扰动的共同影响，换言之，重力扰动在水平分量的速度误差传播通道与加速度计的零偏相同，故可将重力扰动等效为加速度计零偏。常路宾等人结合这个特点\upcite{chang2018gravity}，具体研究了水平方向上加速度计零偏和重力扰动的关系，并结合两者之间的量级关系制定了相应的补偿策略。
+由\ref{diff_delta_vel}可以看出，重力扰动最直接影响的是加速度计对于速度的积分，特别体现在水平通道的上。而水平速度在经过积分计算后，最终对载体位置的解算产生影响。进一步地，也可以看出，重力扰动与加速度计的零偏符号相反，在一些情况下，两者的作用可能会一起放大或者相互抵消。文献\cite{gao2021real}通过设定不同大小重力扰动的仿真试验，发现当重力扰动大于100mGal时，纯惯性导航在一天内计算的最大位置误差将超过4海里，但作者设计的仿真缺少对误差传播特性的定量分析。相反，文献\cite{WANGJING2016}将重力扰动建模为一阶马尔可夫模型，借助相关性分析，定量的确定了重力扰动引起的位置误差量级。除此之外，由于速度误差受到比力测量精度和重力扰动的共同影响，换言之，重力扰动在水平分量的速度误差传播通道与加速度计的零偏相同，故可将重力扰动等效为加速度计零偏。常路宾等人结合这个特点\upcite{chang2018gravity}，具体研究了水平方向上加速度计零偏和重力扰动的关系，并结合两者之间的量级关系制定了相应的补偿策略。
 
 \begin{figure}
       \centering
@@ -218,18 +232,18 @@
 在与GNSS集成的捷联惯导系统中，理论和实验证明，垂线偏差的引入会带来倾斜误差，因此需要进行垂线偏差补偿以提高姿态精度\upcite{grejner1998gravity,dai2015dynamic}。
 陀螺的测量误差模型为：
 \begin{equation}
-      \bm{\delta w}^b_{ib} = \bm{b}_g + \bm{\kappa}_g \bm{ w}^b_{ib} + \bm{N}_g \bm{ w}^b_{ib} + \bm{w}_g
+      \bm{\delta \omega}^b_{ib} = \bm{b}_g + \bmmathrm{S}_g \bm{\omega}^b_{ib} + \bmmathrm{N}_g \bm{\omega}^b_{ib} + \bm{w}_g
       \label{gyro_bias}
 \end{equation}
 将惯导解算中的姿态误差微分方程展开，如式子\ref{equ_phi_more}所示
 \begin{equation}
             \left\{ \begin{aligned}
-            & \dot{\bm{\phi}}_N=-\frac{w_e\sin L}{R_M + h}\delta r_N+\frac{v_E}{(R_N+h)^2}\delta r_D + \frac{1}{R_N + h}\delta v_E \\
-            & \ \ \ \ \ \ \ \ - \left ( w_e\sin L + \frac{v_E\tan L}{R_N +h} \right )\phi_E + \frac{v_N}{R_M+h}\phi_D - \delta w^n_{ib,N} \\ 
+            & \dot{\bm{\phi}}_N=-\frac{\omega_e\sin L}{R_M + h}\delta r_N+\frac{v_E}{(R_N+h)^2}\delta r_D + \frac{1}{R_N + h}\delta v_E \\
+            & \ \ \ \ \ \ \ \ - \left ( \omega_e\sin L + \frac{v_E\tan L}{R_N +h} \right )\phi_E + \frac{v_N}{R_M+h}\phi_D - \delta \omega^n_{ib,N} \\ 
             & \dot{\bm{\phi}}_E= - \frac{v_N}{(R_M + h)^2}\delta r_D - \frac{1}{R_M + h }\delta v_N \\
-            & \ \ \ \ \ \ \ \ + \left ( w_e \sin L + \frac{v_E\tan L}{R_N + h} \right )\phi_N + \left ( w_e \cos L +\frac{v_E}{R_N + h} \right )\phi_D - \delta w^n_{ib,E}\\ 
-            & \dot{\bm{\phi}}_D= - \left [ \frac{w_e\cos L}{R_M + h}+ \frac{v_E\sec ^2L}{(R_M + h)(R_N + h)}\right ]\delta r_N - \frac{v_E \tan L}{(R_N+h)^2}\delta r_D - \frac{\tan L}{R_N + h}\delta v_E \\
-            & \ \ \ \ \ \ \ \ - \frac{v_N}{R_M + h}\phi_N - \left ( w_e \cos L + \frac{v_E}{R_N + h } \right )\phi_E - \delta w^n_{ib,D}
+            & \ \ \ \ \ \ \ \ + \left ( \omega_e \sin L + \frac{v_E\tan L}{R_N + h} \right )\phi_N + \left ( \omega_e \cos L +\frac{v_E}{R_N + h} \right )\phi_D - \delta \omega^n_{ib,E}\\ 
+            & \dot{\bm{\phi}}_D= - \left [ \frac{\omega_e\cos L}{R_M + h}+ \frac{v_E\sec ^2L}{(R_M + h)(R_N + h)}\right ]\delta r_N - \frac{v_E \tan L}{(R_N+h)^2}\delta r_D - \frac{\tan L}{R_N + h}\delta v_E \\
+            & \ \ \ \ \ \ \ \ - \frac{v_N}{R_M + h}\phi_N - \left ( \omega_e \cos L + \frac{v_E}{R_N + h } \right )\phi_E - \delta \omega^n_{ib,D}
       \end{aligned} \right.
       \label{equ_phi_more}
 \end{equation}
@@ -246,45 +260,45 @@
 此外，相关研究表明\upcite{jekeli1994airborne,1020386196.nh,harriman1986gravity,Zhangpanpan23}，当载体运动时，如果速度较大，姿态误差则主要由水平重力扰动的中低频分量(波长$\lambda_0>30$km)引起；随着载体速度减小，高频分量则占主导地位，换句话说，低速运动的载体所经历的重力场细节特征作用更加明显，对姿态误差影响更大，因此确定水平重力扰动的高频信号是进一步提高重力补偿精度的关键。
 
 \subsection{对初始对准的影响}
-在惯导系统进行初始对准时期，在初始条件$v_D =v_E=0, \dot{v}_D=\dot{v}_E = 0, f_D = f_E = 0, f_U = \gamma$下，如果我们事先并不考虑重力扰动项\upcite{LUOKAIXIN2023}，而视作重力模型误差，将其带入速度误差微方程，可以得到
+在惯导系统进行初始对准时期，在初始条件$v_D =v_E=0, \dot{v}_D=\dot{v}_E = 0, f_D = f_E = 0, f_U = \gamma$下，如果事先并不考虑重力扰动项\upcite{LUOKAIXIN2023}，而视作重力模型误差，将其带入速度误差微方程，可以得到
 \begin{equation}
       \left\{ \begin{aligned}
-            &\delta \dot{v}_N = -f_D\phi_E + \delta g_N + \delta f_N
+            &\delta \dot{v}_N = -f_D\phi_E - \delta g_N + \delta f_N
             \\
-            &\delta \dot{v}_E = f_D\phi_N + \delta g_E + \delta f_E
+            &\delta \dot{v}_E = f_D\phi_N - \delta g_E + \delta f_E
       \end{aligned} \right.
 \end{equation}
 于是，北向和东向姿态角误差可以写作
 \begin{equation}
       \left\{ \begin{aligned}
-            &\phi_N = \frac{\delta \dot{v}_E - \delta f_E - \delta g_E}{\gamma} =  \eta - \frac{\delta f_E}{\gamma}
+            &\phi_N = \frac{\delta \dot{v}_E - \delta f_E + \delta g_E}{\gamma} =  -\eta - \frac{\delta f_E}{\gamma}
             \\
-            &\phi_E = \frac{-\delta \dot{v}_N + \delta g_N + \delta f_N}{\gamma} = -\xi + \frac{\delta f_N}{\gamma}
+            &\phi_E = \frac{-\delta \dot{v}_N - \delta g_N + \delta f_N}{\gamma} = -\xi + \frac{\delta f_N}{\gamma}
       \end{aligned} \right.
       \label{equ_phi_align}
 \end{equation}
 而根据姿态角误差微分方程\ref{equ_phi_more}可以得到
 \begin{equation}
       \left\{ \begin{aligned}
-      & \dot{\bm{\phi}}_N=-\phi_E w_e\sin L - \delta w^n_{ib,N} 
+      & \dot{\bm{\phi}}_N=-\phi_E \omega_e\sin L - \delta \omega^n_{ib,N} 
       \\ 
-      & \dot{\bm{\phi}}_E= \phi_N w_e \sin L + \phi_D w_e \cos L - \delta w^n_{ib,E}
+      & \dot{\bm{\phi}}_E= \phi_N \omega_e \sin L + \phi_D \omega_e \cos L - \delta \omega^n_{ib,E}
       \\ 
-      & \dot{\bm{\phi}}_D = -\phi_E w_e \cos L - \delta w^n_{ib,D}
+      & \dot{\bm{\phi}}_D = -\phi_E \omega_e \cos L - \delta \omega^n_{ib,D}
 \end{aligned} \right.
 \label{equ_phi_delta_align}
 \end{equation}
 结合式\ref{equ_phi_delta_align}中第二项，并将\ref{equ_phi_align}代入求解，得到
 \begin{equation}
       \begin{aligned}
-      \phi_D &= \frac{\dot{\phi}_E - \phi_N w_e \sin L +\delta w^n_{ib,E}}{w_e\cos L}
+      \phi_D &= \frac{\dot{\phi}_E - \phi_N \omega_e \sin L +\delta \omega^n_{ib,E}}{\omega_e\cos L}
       \\
-      &= \frac{-\dot{\xi} + \frac{\delta \dot{f}_N}{\gamma}}{w_e\cos L} - (\eta - \frac{\delta f_E}{\gamma})\tan L + \frac{\delta w^n_{ib,E}}{w_e\cos L}
+      &= \frac{-\dot{\xi} + \frac{\delta \dot{f}_N}{\gamma}}{\omega_e\cos L} + (\eta + \frac{\delta f_E}{\gamma})\tan L + \frac{\delta \omega^n_{ib,E}}{\omega_e\cos L}
       \end{aligned}
 \end{equation}
-而当我们通过滤波等其它方法得到收敛的$\dot{\xi}$和$ \delta \dot{f}_N$结果时\upcite{soler2014deflection}，最终可以得到
+而当我们通过滤波等其它方法得到收敛的$\xi$和$ \delta f_N$结果时\upcite{soler2014deflection}，最终可以得到
 \begin{equation}
-      \phi_D = -(\eta - \frac{\delta f_E}{\gamma})\tan L + \frac{\delta w^n_{ib,E}}{w_e\cos L}
+      \phi_D = (\eta + \frac{\delta f_E}{\gamma})\tan{L} + \frac{\delta \omega^n_{ib,E}}{\omega_e\cos L}
 \end{equation}
 
 综上所述，在初始对准时，北向姿态角误差和地向姿态角误差会与东向垂线偏差有关，东向姿态角误差与北向垂线偏差有关。
